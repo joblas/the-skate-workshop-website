@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'About Willy Santos | Commission Skateboard France & Olympic Legend',
@@ -17,6 +18,15 @@ export default function AboutPage() {
             <h1 className="heading-xl text-white mb-6">
               Meet Willy Santos
             </h1>
+            <div className="relative w-48 h-48 mx-auto mb-8">
+              <Image
+                src="/images/coach-willy.jpg"
+                alt="Willy Santos - Elite Skateboarding Coach"
+                fill
+                className="rounded-full object-cover border-4 border-white shadow-2xl"
+                priority
+              />
+            </div>
             <p className="text-2xl text-white/90 mb-8">
               Commission Skateboard France • 30+ Years Elite Experience • Olympic-Level Training
             </p>
@@ -61,6 +71,210 @@ export default function AboutPage() {
                   <h4 className="font-bold text-white mb-2">Professional Skaters</h4>
                   <p className="text-gray-400">Mentored numerous professional street skaters throughout his career</p>
                 </div>
+              </div>
+
+              <h3 className="text-2xl font-bold text-white mt-12 mb-6">Notable Students</h3>
+
+              <p className="text-xl text-gray-300 leading-relaxed mb-6">
+                Willy's coaching expertise has shaped some of skateboarding's most recognized names. These elite athletes trust The Skate Workshop platform for their training and progression:
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-6 my-8">
+                <a
+                  href="https://www.instagram.com/lucie_schoonheere/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-brand-red/50 transition-colors group"
+                >
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <Image
+                      src="/images/athletes/lucie-schoonheere.jpg"
+                      alt="Lucie Schoonheere"
+                      fill
+                      className="rounded-full object-cover border-2 border-brand-red"
+                    />
+                  </div>
+                  <div className="text-brand-red text-xl mb-2 text-center">🇧🇪</div>
+                  <h4 className="font-bold text-white mb-2 group-hover:text-brand-red transition-colors text-center">Lucie Schoonheere</h4>
+                  <p className="text-gray-400 text-sm text-center">Belgian Olympic skateboarder competing at the highest international level</p>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/vincentmilou/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-brand-red/50 transition-colors group"
+                >
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <Image
+                      src="/images/athletes/vincent-milou.jpg"
+                      alt="Vincent Milou"
+                      fill
+                      className="rounded-full object-cover border-2 border-brand-red"
+                    />
+                  </div>
+                  <div className="text-brand-red text-xl mb-2 text-center">🇫🇷</div>
+                  <h4 className="font-bold text-white mb-2 group-hover:text-brand-red transition-colors text-center">Vincent Milou</h4>
+                  <p className="text-gray-400 text-sm text-center">Former Willy's Workshop team member and close friend, pro street skater</p>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/brycewettstein/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-brand-red/50 transition-colors group"
+                >
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <Image
+                      src="/images/athletes/bryce-wettstein.jpg"
+                      alt="Bryce Wettstein"
+                      fill
+                      className="rounded-full object-cover border-2 border-brand-red"
+                    />
+                  </div>
+                  <div className="text-brand-red text-xl mb-2 text-center">🇺🇸</div>
+                  <h4 className="font-bold text-white mb-2 group-hover:text-brand-red transition-colors text-center">Bryce Wettstein</h4>
+                  <p className="text-gray-400 text-sm text-center">X-Games medalist and Olympic athlete representing USA</p>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/mazelparis/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-brand-red/50 transition-colors group"
+                >
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <Image
+                      src="/images/athletes/mazel-paris.jpg"
+                      alt="Mazel Paris"
+                      fill
+                      className="rounded-full object-cover border-2 border-brand-red"
+                    />
+                  </div>
+                  <div className="text-brand-red text-xl mb-2 text-center">🇵🇭</div>
+                  <h4 className="font-bold text-white mb-2 group-hover:text-brand-red transition-colors text-center">Mazel Paris</h4>
+                  <p className="text-gray-400 text-sm text-center">Filipino skateboarding talent pushing street skating boundaries</p>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/t.ichiro04/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-brand-red/50 transition-colors group"
+                >
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <Image
+                      src="/images/athletes/ichiro-tanabe.jpg"
+                      alt="Ichiro Tanabe"
+                      fill
+                      className="rounded-full object-cover border-2 border-brand-red"
+                    />
+                  </div>
+                  <div className="text-brand-red text-xl mb-2 text-center">🇯🇵</div>
+                  <h4 className="font-bold text-white mb-2 group-hover:text-brand-red transition-colors text-center">Ichiro Tanabe</h4>
+                  <p className="text-gray-400 text-sm text-center">Japanese professional skater with technical street expertise</p>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/sakura_yosozumi/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-brand-red/50 transition-colors group"
+                >
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <Image
+                      src="/images/athletes/sakura-yosozumi.jpg"
+                      alt="Sakura Yosozumi"
+                      fill
+                      className="rounded-full object-cover border-2 border-brand-red"
+                    />
+                  </div>
+                  <div className="text-brand-red text-xl mb-2 text-center">🥇</div>
+                  <h4 className="font-bold text-white mb-2 group-hover:text-brand-red transition-colors text-center">Sakura Yosozumi</h4>
+                  <p className="text-gray-400 text-sm text-center">Tokyo 2020 Olympic gold medalist, park skateboarding champion</p>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/joseph_garbaccio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-brand-red/50 transition-colors group"
+                >
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <Image
+                      src="/images/athletes/joseph-garbaccio.jpg"
+                      alt="Joseph Garbaccio"
+                      fill
+                      className="rounded-full object-cover border-2 border-brand-red"
+                    />
+                  </div>
+                  <div className="text-brand-red text-xl mb-2 text-center">🇫🇷</div>
+                  <h4 className="font-bold text-white mb-2 group-hover:text-brand-red transition-colors text-center">Joseph Garbaccio</h4>
+                  <p className="text-gray-400 text-sm text-center">Commission Skateboard France team member, competitive street skater</p>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/nanacondaskate/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-brand-red/50 transition-colors group"
+                >
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <Image
+                      src="/images/athletes/nana-conda.jpg"
+                      alt="Nana Conda"
+                      fill
+                      className="rounded-full object-cover border-2 border-brand-red"
+                    />
+                  </div>
+                  <div className="text-brand-red text-xl mb-2 text-center">🇫🇷</div>
+                  <h4 className="font-bold text-white mb-2 group-hover:text-brand-red transition-colors text-center">Nana Conda</h4>
+                  <p className="text-gray-400 text-sm text-center">Commission Skateboard France team member, rising street talent</p>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/noe_montagard/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-brand-red/50 transition-colors group"
+                >
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <Image
+                      src="/images/athletes/noe-montagard.jpg"
+                      alt="Noé Montagard"
+                      fill
+                      className="rounded-full object-cover border-2 border-brand-red"
+                    />
+                  </div>
+                  <div className="text-brand-red text-xl mb-2 text-center">🇫🇷</div>
+                  <h4 className="font-bold text-white mb-2 group-hover:text-brand-red transition-colors text-center">Noé Montagard</h4>
+                  <p className="text-gray-400 text-sm text-center">Commission Skateboard France team member, technical street skater</p>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/tom.martin.13/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-brand-red/50 transition-colors group"
+                >
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <Image
+                      src="/images/athletes/tom-martin.jpg"
+                      alt="Tom Martin"
+                      fill
+                      className="rounded-full object-cover border-2 border-brand-red"
+                    />
+                  </div>
+                  <div className="text-brand-red text-xl mb-2 text-center">🇫🇷</div>
+                  <h4 className="font-bold text-white mb-2 group-hover:text-brand-red transition-colors text-center">Tom Martin</h4>
+                  <p className="text-gray-400 text-sm text-center">Commission Skateboard France team member, competitive skater</p>
+                </a>
+              </div>
+
+              <div className="bg-brand-red/10 border border-brand-red/30 rounded-xl p-6 my-8">
+                <p className="text-gray-300 italic text-center">
+                  These world-class athletes use The Skate Workshop platform to track their sessions, analyze their progression, and maintain their competitive edge.
+                </p>
               </div>
 
               <h3 className="text-2xl font-bold text-white mt-12 mb-6">Coaching Philosophy</h3>
