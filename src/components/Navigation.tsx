@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
@@ -55,15 +56,17 @@ export default function Navigation() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`bg-brand-red rounded-lg flex items-center justify-center transition-all duration-300 ${
+                className={`relative flex items-center justify-center transition-all duration-300 ${
                   scrolled ? 'w-10 h-10' : 'w-12 h-12'
                 }`}
               >
-                <span className={`font-bold text-white transition-all duration-300 ${
-                  scrolled ? 'text-lg' : 'text-2xl'
-                }`}>
-                  SW
-                </span>
+                <Image
+                  src="/images/logo/logo.png"
+                  alt="The Skate Workshop Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </motion.div>
               <div className="hidden sm:flex flex-col">
                 <span className={`font-bold text-white transition-all duration-300 ${
