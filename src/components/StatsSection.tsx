@@ -11,7 +11,7 @@ export default function StatsSection() {
       value: 30,
       suffix: '+',
       label: 'Years Coaching',
-      description: 'Olympic-level experience'
+      description: 'Coaching Olympic athletes'
     },
     {
       icon: Database,
