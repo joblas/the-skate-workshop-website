@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import WaitlistForm from '@/components/WaitlistForm'
 
 export const metadata: Metadata = {
   title: 'Download The Skate Workshop App | iOS & Android',
@@ -78,34 +79,9 @@ export default function DownloadPage() {
               </div>
             </div>
 
-            {/* Email Waitlist Form */}
-            <div id="waitlist" className="bg-gradient-to-r from-brand-red to-brand-red-dark rounded-2xl p-8 md:p-12 text-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Join the Launch Waitlist
-              </h3>
-              <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-                Get exclusive early access, launch updates, and be among the first to experience elite skateboarding coaching from Willy Santos.
-              </p>
-              
-              <form className="max-w-md mx-auto">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    required
-                    className="flex-1 px-6 py-4 rounded-lg bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-black hover:bg-gray-900 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95"
-                  >
-                    Notify Me
-                  </button>
-                </div>
-                <p className="text-white/70 text-sm mt-4">
-                  We'll never spam you. Unsubscribe anytime.
-                </p>
-              </form>
+            {/* Premium Waitlist Form */}
+            <div id="waitlist">
+              <WaitlistForm />
             </div>
           </div>
         </div>
