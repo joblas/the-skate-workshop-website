@@ -71,7 +71,7 @@ export default function HeroSection() {
   }
 
   // Split headline into words
-  const headline = "Elite Skateboarding Coaching from an Olympic Legend"
+  const headline = "Elite Skateboarding Coaching from a Coach of Olympians"
   const words = headline.split(' ')
 
   return (

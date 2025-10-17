@@ -4,7 +4,7 @@ import WaitlistForm from '@/components/WaitlistForm'
 
 export const metadata: Metadata = {
   title: 'Download The Skate Workshop App | iOS & Android',
-  description: 'Download The Skate Workshop on iOS and Android. Elite skateboarding coaching from Olympic legend Willy Santos, available on your phone.',
+  description: 'Download The Skate Workshop on iOS and Android. Elite skateboarding coaching from Willy Santos, coach of Olympic athletes, available on your phone.',
   keywords: 'download skateboarding app, iOS skate app, Android skate app, skateboarding coaching download',
 }
 

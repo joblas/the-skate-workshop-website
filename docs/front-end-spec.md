@@ -18,12 +18,12 @@ This document defines the user experience goals, information architecture, user 
 
 1. **Elite Athletes & Aspiring Pros**
    - Professional and semi-professional skateboarders seeking Olympic-level coaching
-   - Ages 16-30, highly motivated, performance-driven
+   - Ages 1230, highly motivated, performance-driven
    - Need: Detailed analytics, professional progress tracking, credible coaching credentials
 
 2. **Serious Hobbyists**
    - Dedicated skaters who invest in their progression
-   - Ages 14-35, willing to pay for quality coaching
+   - Ages 1035, willing to pay for quality coaching
    - Need: Clear progression system, motivational features, community engagement
 
 3. **Coaches & Trainers**

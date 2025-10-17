@@ -8,13 +8,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://theskateworkshop.app'),
-  title: 'The Skate Workshop | Elite Skateboarding Coaching from an Olympic Legend',
+  title: 'The Skate Workshop | Elite Skateboarding Coaching from a Coach of Olympians',
   description: 'Train with Willy Santos, working with Commission Skateboard France with 30+ years of experience. Elite skateboarding coaching platform featuring premium video analysis, live session tracking, and 400+ trick database.',
   keywords: 'skateboarding coaching, elite skate training, Olympic skateboard coach, Willy Santos, professional skateboarding, skate lessons',
   authors: [{ name: 'The Skate Workshop' }],
   openGraph: {
     title: 'The Skate Workshop | Elite Skateboarding Coaching',
-    description: 'Train with Olympic-level coach Willy Santos. Premium skateboarding coaching platform with video analysis, progress tracking, and expert guidance.',
+    description: 'Train with Willy Santos, coach of Olympic athletes. Premium skateboarding coaching platform with video analysis, progress tracking, and expert guidance.',
     url: 'https://theskateworkshop.app',
     siteName: 'The Skate Workshop',
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'The Skate Workshop | Elite Skateboarding Coaching',
-    description: 'Train with Olympic-level coach Willy Santos',
+    description: 'Train with Willy Santos, coach of Olympic athletes',
     images: ['/og-image.png'],
   },
 }
