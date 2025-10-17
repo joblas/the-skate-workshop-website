@@ -13,9 +13,12 @@ export const metadata: Metadata = {
   keywords: 'skateboarding coaching, elite skate training, Olympic skateboard coach, Willy Santos, professional skateboarding, skate lessons',
   authors: [{ name: 'The Skate Workshop' }],
   icons: {
-    icon: '/images/logo/tsw-logo.webp',
-    shortcut: '/images/logo/tsw-logo.webp',
-    apple: '/images/logo/tsw-logo.webp',
+    icon: [
+      { url: '/images/logo/tsw-logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/logo/tsw-logo.png', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: '/images/logo/tsw-logo.png',
+    apple: { url: '/images/logo/tsw-logo.png', sizes: '180x180', type: 'image/png' },
   },
   openGraph: {
     title: 'The Skate Workshop | Elite Skateboarding Coaching',
