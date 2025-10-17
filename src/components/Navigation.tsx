@@ -61,7 +61,7 @@ export default function Navigation() {
                 }`}
               >
                 <Image
-                  src="/images/logo/logo.png"
+                  src="/images/logo/tsw-logo.webp"
                   alt="The Skate Workshop Logo"
                   fill
                   className="object-contain"

@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3 mb-4">
               <div className="relative w-10 h-10 flex items-center justify-center">
                 <Image
-                  src="/images/logo/logo.png"
+                  src="/images/logo/tsw-logo.webp"
                   alt="The Skate Workshop Logo"
                   fill
                   className="object-contain"
