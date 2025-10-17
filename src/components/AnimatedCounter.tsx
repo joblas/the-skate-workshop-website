@@ -24,16 +24,13 @@ export default function AnimatedCounter({
   decimals = 0
 }: AnimatedCounterProps) {
   const [value, setValue] = useState(0)
-  const [hasAnimated, setHasAnimated] = useState(false)
   const ref = useRef<HTMLSpanElement>(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
   const shouldReduceMotion = useReducedMotion()
 
   useEffect(() => {
-    // Only animate once when in view
-    if (!isInView || hasAnimated) return
-
-    setHasAnimated(true)
+    // Only animate when in view
+    if (!isInView) return
 
     // If reduced motion is preferred, show final value immediately
     if (shouldReduceMotion) {
@@ -41,35 +38,39 @@ export default function AnimatedCounter({
       return
     }
 
-    const startTime = performance.now()
+    // Add a small delay before starting the animation
     let animationFrameId: number
+    const delayTimeout = setTimeout(() => {
+      const startTime = performance.now()
 
-    const animate = (currentTime: number) => {
-      const elapsed = currentTime - startTime
-      const progress = Math.min(elapsed / duration, 1)
+      const animate = (currentTime: number) => {
+        const elapsed = currentTime - startTime
+        const progress = Math.min(elapsed / duration, 1)
 
-      // Easing function (ease-out cubic)
-      const easeOut = 1 - Math.pow(1 - progress, 3)
-      const current = easeOut * target
+        // Easing function (ease-out cubic)
+        const easeOut = 1 - Math.pow(1 - progress, 3)
+        const current = easeOut * target
 
-      setValue(current)
+        setValue(current)
 
-      if (progress < 1) {
-        animationFrameId = requestAnimationFrame(animate)
-      } else {
-        setValue(target) // Ensure we end exactly at target
+        if (progress < 1) {
+          animationFrameId = requestAnimationFrame(animate)
+        } else {
+          setValue(target) // Ensure we end exactly at target
+        }
       }
-    }
 
-    animationFrameId = requestAnimationFrame(animate)
+      animationFrameId = requestAnimationFrame(animate)
+    }, 100)
 
     // Cleanup function to cancel animation if component unmounts
     return () => {
+      clearTimeout(delayTimeout)
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId)
       }
     }
-  }, [isInView, hasAnimated, target, duration, shouldReduceMotion])
+  }, [isInView, target, duration, shouldReduceMotion])
 
   // Format the number
   const formattedValue = value.toFixed(decimals)
