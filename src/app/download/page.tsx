@@ -312,15 +312,15 @@ export default function DownloadPage() {
               Ready to Train with the Best?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Download The Skate Workshop today and start your journey to elite skateboarding
+              Join the waitlist and be among the first to experience elite skateboarding coaching from Willy Santos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#" className="btn-primary bg-black hover:bg-gray-900">
-                Download for iOS
+              <a href="#waitlist" className="btn-primary bg-black hover:bg-gray-900">
+                Join Waitlist
               </a>
-              <a href="#" className="btn-primary bg-black hover:bg-gray-900">
-                Download for Android
-              </a>
+              <Link href="/about" className="btn-primary bg-black hover:bg-gray-900">
+                Learn More
+              </Link>
             </div>
           </div>
         </div>
