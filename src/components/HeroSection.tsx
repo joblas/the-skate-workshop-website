@@ -99,17 +99,17 @@ export default function HeroSection() {
             MOBILE TRAINING APP
           </motion.p>
 
-          {/* Warm, welcoming headline */}
+          {/* MASSIVE headline with color accent */}
           <motion.h1
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="text-display-xl font-heading text-white mb-12 max-w-6xl antialiased"
+            className="text-display-lg font-heading text-white mb-12 max-w-6xl antialiased"
           >
-            Let's skate together and <span className="text-brand-red">have some fun</span>
+            Take your skating to the <span className="text-brand-red">next level</span>
           </motion.h1>
 
-          {/* Personal, humble subtitle */}
+          {/* Minimal subtitle */}
           <motion.p
             variants={subtitleVariants}
             initial="hidden"
@@ -124,20 +124,20 @@ export default function HeroSection() {
             variants={buttonContainerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col sm:flex-row gap-5 items-start"
+            className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-start w-full sm:w-auto"
           >
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
               <Link
                 href="/download"
-                className="btn-primary text-lg px-12 py-5"
+                className="btn-primary text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-5 w-full sm:w-auto text-center block"
               >
                 Join the Community
               </Link>
             </motion.div>
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
               <Link
                 href="/about"
-                className="btn-ghost text-lg px-12 py-5"
+                className="btn-ghost text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-5 w-full sm:w-auto text-center block"
               >
                 Get to Know Willy
               </Link>

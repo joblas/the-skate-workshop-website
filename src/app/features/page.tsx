@@ -15,7 +15,7 @@ export default function FeaturesPage() {
           <p className="text-white/60 uppercase tracking-widest text-sm mb-8">How I can help you</p>
 
           <h1 className="text-display-xl font-heading text-white mb-12 max-w-6xl">
-            Simple tools to help you <span className="text-brand-red">improve and have fun</span>
+            Professional tools to <span className="text-brand-red">accelerate your progress</span>
           </h1>
 
           <p className="text-body-lg text-white/70 max-w-2xl">
@@ -30,7 +30,7 @@ export default function FeaturesPage() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-display font-heading text-white mb-8">
-                Personal <span className="text-brand-red">video feedback</span>
+                Expert <span className="text-brand-red">video analysis</span>
               </h2>
               <p className="text-body text-white/70 mb-8">
                 Send me your clips and I'll give you helpful, specific feedback to improve your technique. I'll break it down frame by frame, draw on your videos, and send you voice notes with tips that are just for you.
@@ -57,7 +57,7 @@ export default function FeaturesPage() {
 
             <div className="order-1 md:order-2">
               <h2 className="text-display font-heading text-white mb-8">
-                Watch yourself <span className="text-brand-red">grow</span>
+                Track your <span className="text-brand-red">progress</span>
               </h2>
               <p className="text-body text-white/70 mb-8">
                 We'll keep track of your progress together! With over 400 tricks to work on, you can log every session and see how much you've improved over time. It's really motivating to look back and see how far you've come.
@@ -76,7 +76,7 @@ export default function FeaturesPage() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-display font-heading text-white mb-8">
-                Have fun with <span className="text-brand-red">your crew</span>
+                Challenge <span className="text-brand-red">your friends</span>
               </h2>
               <p className="text-body text-white/70 mb-8">
                 Play games of SKATE with your friends, share your progress, and cheer each other on! You can challenge your local crew or connect with skaters from around the world. It's all about having fun and supporting each other.
@@ -152,7 +152,7 @@ export default function FeaturesPage() {
           <p className="text-white/60 uppercase tracking-widest text-sm mb-8">Excited to get started?</p>
 
           <h2 className="text-display font-heading text-white mb-12 max-w-5xl mx-auto">
-            Let's start <span className="text-brand-red">skating together</span>
+            Ready to <span className="text-brand-red">level up</span>?
           </h2>
 
           <Link href="/download" className="btn-primary text-lg px-16 py-6 inline-block">

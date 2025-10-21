@@ -1,30 +1,23 @@
 import type { Metadata } from 'next'
-import { Anek_Tamil, Inter, JetBrains_Mono } from 'next/font/google'
+import { Poppins, Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { Analytics } from '@vercel/analytics/next'
 
-// Premium Font System
-const anekTamil = Anek_Tamil({
+// Modern Font System for Skateboarding App
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-anek-tamil',
+  variable: '--font-heading',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
 })
 
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-geist',
+  variable: '--font-body',
   display: 'swap',
   weight: ['400', '500', '600'],
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-geist-mono',
-  display: 'swap',
-  weight: ['400', '500'],
 })
 
 export const metadata: Metadata = {
@@ -73,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${anekTamil.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

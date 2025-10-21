@@ -59,7 +59,7 @@ export default function CoachesPage() {
           <p className="text-white/60 uppercase tracking-widest text-sm mb-8">For fellow coaches</p>
 
           <h1 className="text-display-xl font-heading text-white mb-12 max-w-6xl">
-            Help me build a <span className="text-brand-red">supportive community</span>
+            Join our <span className="text-brand-red">coaching network</span>
           </h1>
 
           <p className="text-body-lg text-white/70 max-w-2xl mb-8">

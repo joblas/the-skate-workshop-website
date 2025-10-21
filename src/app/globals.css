@@ -6,15 +6,15 @@
   html {
     @apply scroll-smooth;
     scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
     text-rendering: optimizeLegibility;
   }
 
   body {
-    @apply bg-black text-white antialiased font-body;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @apply bg-black text-white font-body;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
     font-display: swap;
     will-change: scroll-position;
   }
@@ -49,20 +49,23 @@
 }
 
 @layer components {
-  /* Premium Buttons */
+  /* Premium Buttons - Responsive */
   .btn-primary {
-    @apply bg-brand-red hover:bg-brand-red-dark text-white font-semibold px-8 py-4 rounded-lg
-           transition-all duration-200 hover:scale-105 active:scale-95 text-body-sm antialiased;
+    @apply bg-brand-red hover:bg-brand-red-dark text-white font-semibold rounded-lg
+           transition-all duration-200 hover:scale-105 active:scale-95 text-body-sm
+           px-6 py-3 sm:px-8 sm:py-4 min-h-[48px] touch-manipulation;
   }
 
   .btn-secondary {
-    @apply border-2 border-brand-red hover:bg-brand-red/10 text-white font-semibold px-8 py-4
-           rounded-lg transition-all duration-200 text-body-sm antialiased;
+    @apply border-2 border-brand-red hover:bg-brand-red/10 text-white font-semibold rounded-lg
+           transition-all duration-200 text-body-sm
+           px-6 py-3 sm:px-8 sm:py-4 min-h-[48px] touch-manipulation;
   }
 
   .btn-ghost {
-    @apply hover:bg-white/5 text-white font-medium px-6 py-3 rounded-lg
-           transition-all duration-200 text-body-sm antialiased;
+    @apply hover:bg-white/5 text-white font-medium rounded-lg
+           transition-all duration-200 text-body-sm
+           px-4 py-2 sm:px-6 sm:py-3 min-h-[44px] touch-manipulation;
   }
 
   /* Premium Containers */

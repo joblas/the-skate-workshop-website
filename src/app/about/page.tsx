@@ -18,13 +18,10 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h1 className="text-display-xl font-heading text-white mb-12">
-                Family man, skater, <span className="text-brand-red">community helper</span>
+                World Class <span className="text-brand-red">Skate Mentor</span>
               </h1>
               <p className="text-body-lg text-white/80 mb-8 max-w-xl">
-                Hey there! I'm Willy Santos. When I'm not spending time with my family, you'll find me at the local skate park helping kids land their first kickflip or working with skaters who dream of competing at the highest level.
-              </p>
-              <p className="text-body text-white/60 max-w-xl">
-                I've been incredibly blessed to work with some amazing athletes over the years, but what really fills my heart is seeing the joy on someone's face when they finally nail that trick they've been working on.
+                Hey, I'm Willy Santos. I've been coaching for over 30 years, working with Commission Skateboard France, X-Games medalists, and Olympic competitors. I love helping skaters at every level find their flow and push their limits. Let's work together.
               </p>
             </div>
 
@@ -100,8 +97,8 @@ export default function AboutPage() {
 
           <div className="max-w-4xl">
             <h2 className="text-display-lg font-heading text-white mb-12">
-              Start with the <span className="text-brand-red">fundamentals</span><br/>
-              and have <span className="text-brand-red">fun along the way</span>
+              Master the <span className="text-brand-red">fundamentals</span><br/>
+              Build <span className="text-brand-red">real progress</span>
             </h2>
 
             <div className="grid md:grid-cols-3 gap-10">
@@ -162,7 +159,7 @@ export default function AboutPage() {
           <p className="text-white/60 uppercase tracking-widest text-sm mb-8">Want to skate together?</p>
 
           <h2 className="text-display font-heading text-white mb-12 max-w-5xl mx-auto">
-            I'd love to help you on <span className="text-brand-red">your skating journey</span>
+            Ready to take your skating <span className="text-brand-red">to the next level</span>?
           </h2>
 
           <Link href="/download" className="btn-primary text-lg px-16 py-6 inline-block">

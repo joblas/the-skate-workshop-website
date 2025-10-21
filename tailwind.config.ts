@@ -39,10 +39,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-anek-tamil)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-anek-tamil)', 'system-ui', 'sans-serif'],
-        body: ['var(--font-geist)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-geist-mono)', 'SF Mono', 'Monaco', 'monospace'],
+        sans: ['var(--font-body)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-heading)', 'system-ui', 'sans-serif'],
+        body: ['var(--font-body)', 'system-ui', 'sans-serif'],
+        mono: ['ui-monospace', 'SF Mono', 'Monaco', 'monospace'],
       },
       fontSize: {
         // Premium Typography Scale with Tight Letter-Spacing

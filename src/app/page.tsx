@@ -16,13 +16,10 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-display font-heading text-white mb-8">
-                I'd love to <span className="text-brand-red">help you improve</span>
+                Coaching that <span className="text-brand-red">actually helps</span>
               </h2>
-              <p className="text-body text-white/70 max-w-xl mb-6">
-                Whether you're just starting out or looking to nail that next trick, I'm here to help. We'll work together with video breakdowns, progress tracking, and personal feedback.
-              </p>
               <p className="text-body text-white/70 max-w-xl">
-                I've been skating and coaching for over 30 years, and I genuinely love helping people get better at this amazing sport.
+                Whether you're just starting out or looking to nail that next trick, I'm here to help. We'll work together with video breakdowns, progress tracking, and personal feedback. I've been skating and coaching for over 30 years, and I genuinely love helping people get better at this amazing sport.
               </p>
             </div>
             <div className="relative h-[500px] bg-gray-900/30 rounded-2xl overflow-hidden">
@@ -39,7 +36,7 @@ export default function HomePage() {
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
           <h2 className="text-h2 font-heading text-white mb-20 text-center">
-            Here's how we'll <span className="text-brand-red">work together</span>
+            What you'll <span className="text-brand-red">get</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -77,8 +74,7 @@ export default function HomePage() {
 
           <div className="max-w-4xl">
             <h2 className="text-display-lg font-heading text-white mb-12">
-              I'm just a guy who <span className="text-brand-red">loves skateboarding</span><br/>
-              and helping <span className="text-brand-red">others love it too</span>
+              30+ years of experience <span className="text-brand-red">helping skaters grow</span>
             </h2>
             <p className="text-body-lg text-white/70 max-w-2xl mb-8">
               I'm Willy Santos, and I've been incredibly fortunate to work with some amazing skaters over the past 30+ years, including Olympic athletes. But honestly, what I love most is helping everyday skaters discover the joy of progression.
@@ -96,7 +92,7 @@ export default function HomePage() {
           <p className="text-white/60 uppercase tracking-widest text-sm mb-8">Ready to start?</p>
 
           <h2 className="text-display font-heading text-white mb-12 max-w-5xl mx-auto">
-            Come skate with <span className="text-brand-red">our community</span>
+            Ready to <span className="text-brand-red">level up</span>?
           </h2>
 
           <Link href="/download" className="btn-primary text-lg px-16 py-6 inline-block">
