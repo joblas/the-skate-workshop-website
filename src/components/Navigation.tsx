@@ -2,203 +2,88 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
 
 export default function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const { scrollYProgress } = useScroll()
-
-  // Detect scroll to shrink navigation
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    setScrolled(latest > 0.05)
-  })
-
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'unset'
-    }
-  }, [mobileMenuOpen])
 
   const navLinks = [
-    { href: '/about', label: 'About Willy' },
-    { href: '/features', label: 'Features' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/coaches', label: 'Coaches' },
+    { href: '/', label: 'HOME' },
+    { href: '/about', label: 'ABOUT' },
+    { href: '/features', label: 'FEATURES' },
+    { href: '/coaches', label: 'COACHES' },
+    { href: 'https://willysworkshop.com/', label: 'SHOP', external: true },
   ]
 
   return (
     <>
-      {/* Scroll Progress Indicator */}
-      <motion.div
-        style={{ scaleX: scrollYProgress }}
-        className="fixed top-0 left-0 right-0 h-1 bg-brand-red origin-left z-50"
-      />
+      {/* Minimal top border */}
+      <div className="fixed top-0 left-0 right-0 h-px bg-white/10 z-50" />
 
       {/* Navigation */}
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.3 }}
-        className={`fixed top-0 w-full bg-black/95 backdrop-blur-md border-b border-gray-800/50 z-40 transition-all duration-300 ${
-          scrolled ? 'h-16' : 'h-20'
-        }`}
-      >
+      <nav className="fixed top-0 w-full bg-black border-b border-white/10 z-40 h-24">
         <div className="section-container h-full">
           <div className="flex items-center justify-between h-full">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 group">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`relative flex items-center justify-center transition-all duration-300 ${
-                  scrolled ? 'w-10 h-10' : 'w-12 h-12'
-                }`}
-              >
+            {/* Professional Logo */}
+            <Link href="/" className="flex items-center space-x-4 group hover:opacity-90 transition-opacity duration-200">
+              <div className="relative w-16 h-16 flex items-center justify-center">
                 <Image
-                  src="/images/logo/tsw-logo.webp"
-                  alt="The Skate Workshop Logo"
-                  fill
-                  className="object-contain"
+                  src="/images/logo/icon.png"
+                  alt="The Skate Workshop"
+                  width={64}
+                  height={64}
+                  className="object-contain w-full h-full antialiased"
                   priority
+                  quality={100}
+                  style={{
+                    imageRendering: 'crisp-edges',
+                    WebkitFontSmoothing: 'antialiased',
+                    MozOsxFontSmoothing: 'grayscale'
+                  }}
                 />
-              </motion.div>
-              <div className="hidden sm:flex flex-col">
-                <span className={`font-bold text-white transition-all duration-300 ${
-                  scrolled ? 'text-base' : 'text-xl'
-                }`}>
-                  The Skate Workshop
+              </div>
+              <div className="flex flex-col">
+                <span className="font-heading text-xl font-bold text-white tracking-tight leading-tight antialiased" style={{
+                  WebkitFontSmoothing: 'antialiased',
+                  MozOsxFontSmoothing: 'grayscale',
+                  textRendering: 'optimizeLegibility'
+                }}>
+                  TheSkateWorkshop
                 </span>
-                <span className={`text-gray-400 transition-all duration-300 ${
-                  scrolled ? 'text-xs' : 'text-xs'
-                }`}>
-                  Elite Coaching Platform
+                <span className="text-xs text-white/60 font-medium tracking-wider uppercase antialiased" style={{
+                  WebkitFontSmoothing: 'antialiased',
+                  MozOsxFontSmoothing: 'grayscale'
+                }}>
+                  Pro Coaching
                 </span>
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            {/* Navigation - Always visible */}
+            <div className="flex items-center space-x-6 md:space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative text-gray-300 hover:text-white transition-colors group"
+                  className="text-white/80 hover:text-white transition-colors text-sm font-heading tracking-wider antialiased"
+                  {...(link.external && { target: "_blank", rel: "noopener noreferrer" })}
                 >
                   {link.label}
-                  {/* Animated underline */}
-                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-brand-red transition-all duration-300 group-hover:w-full" />
                 </Link>
               ))}
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link
-                  href="/download"
-                  className="btn-primary bg-brand-red hover:bg-brand-red-dark text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-glow"
-                >
-                  Join Waitlist
-                </Link>
-              </motion.div>
+              
+              {/* CTA Button */}
+              <Link
+                href="/download"
+                className="relative inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-brand-red to-red-600 hover:from-red-600 hover:to-brand-red text-white font-semibold text-sm tracking-wider uppercase rounded-full transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:shadow-brand-red/25 group overflow-hidden antialiased"
+              >
+                <span className="relative z-10">JOIN WAITLIST</span>
+                {/* Animated background overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
+              </Link>
             </div>
-
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-800/50 transition-colors"
-              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={mobileMenuOpen}
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-white" />
-              ) : (
-                <Menu className="w-6 h-6 text-white" />
-              )}
-            </button>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
-      {/* Mobile Menu Overlay */}
-      {mobileMenuOpen && (
-        <>
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setMobileMenuOpen(false)}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-30 lg:hidden"
-          />
-
-          {/* Mobile Menu Panel */}
-          <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed top-0 right-0 bottom-0 w-full sm:w-80 bg-surface/95 backdrop-blur-md border-l border-gray-800 z-40 lg:hidden overflow-y-auto"
-          >
-            {/* Mobile Menu Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-800">
-              <span className="text-xl font-bold text-white">Menu</span>
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className="p-2 rounded-lg hover:bg-gray-800/50 transition-colors"
-                aria-label="Close menu"
-              >
-                <X className="w-6 h-6 text-white" />
-              </button>
-            </div>
-
-            {/* Mobile Menu Links */}
-            <div className="p-6 space-y-1">
-              {navLinks.map((link, index) => (
-                <motion.div
-                  key={link.href}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                >
-                  <Link
-                    href={link.href}
-                    className="block text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all py-3 px-4 rounded-lg"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                </motion.div>
-              ))}
-
-              {/* Mobile CTA */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: navLinks.length * 0.05 }}
-                className="pt-4"
-              >
-                <Link
-                  href="/download"
-                  className="block text-center btn-primary bg-brand-red hover:bg-brand-red-dark text-white py-3 px-4 rounded-lg font-semibold transition-all duration-200"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Join Waitlist
-                </Link>
-              </motion.div>
-            </div>
-
-            {/* Mobile Menu Footer */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-800">
-              <p className="text-sm text-gray-400 text-center">
-                Elite Skateboarding Coaching
-              </p>
-            </div>
-          </motion.div>
-        </>
-      )}
 
       {/* Skip to main content link for accessibility */}
       <a

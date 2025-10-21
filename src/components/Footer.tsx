@@ -8,19 +8,36 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="relative w-10 h-10 flex items-center justify-center">
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="relative w-14 h-14 flex items-center justify-center">
                 <Image
-                  src="/images/logo/tsw-logo.webp"
+                  src="/images/logo/icon.png"
                   alt="The Skate Workshop Logo"
-                  fill
-                  className="object-contain"
+                  width={56}
+                  height={56}
+                  className="object-contain w-full h-full antialiased"
+                  quality={100}
+                  style={{
+                    imageRendering: 'crisp-edges',
+                    WebkitFontSmoothing: 'antialiased',
+                    MozOsxFontSmoothing: 'grayscale'
+                  }}
                 />
               </div>
-              <span className="text-lg font-bold text-white">The Skate Workshop</span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-white antialiased" style={{
+                  WebkitFontSmoothing: 'antialiased',
+                  MozOsxFontSmoothing: 'grayscale',
+                  textRendering: 'optimizeLegibility'
+                }}>The Skate Workshop</span>
+                <span className="text-sm text-white/60 font-medium antialiased" style={{
+                  WebkitFontSmoothing: 'antialiased',
+                  MozOsxFontSmoothing: 'grayscale'
+                }}>Pro Skateboarding Coaching</span>
+              </div>
             </div>
             <p className="text-gray-400 text-sm">
-              Elite skateboarding coaching from Olympic-level coach Willy Santos
+              Professional skateboarding coaching from Olympic-level coach Willy Santos
             </p>
           </div>
 
@@ -58,6 +75,16 @@ export default function Footer() {
               <li>
                 <Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
                   About Willy Santos
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="https://willysworkshop.com/" 
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Willy's Skateboard Shop
                 </Link>
               </li>
             </ul>

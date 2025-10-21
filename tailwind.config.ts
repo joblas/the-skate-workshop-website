@@ -7,6 +7,13 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    // Premium Breakpoints - Mobile First
+    screens: {
+      'sm': '800px',   // Tablet
+      'md': '1200px',  // Desktop
+      'lg': '1280px',  // Large Desktop
+      'xl': '2048px',  // Ultra-wide
+    },
     extend: {
       colors: {
         // The Skate Workshop Premium Red Branding
@@ -32,26 +39,53 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['SF Mono', 'Monaco', 'Cascadia Code', 'monospace'],
+        sans: ['var(--font-anek-tamil)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-anek-tamil)', 'system-ui', 'sans-serif'],
+        body: ['var(--font-geist)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-geist-mono)', 'SF Mono', 'Monaco', 'monospace'],
       },
       fontSize: {
-        // Fluid Typography Scale
-        'display': 'clamp(3.5rem, 8vw, 7rem)',
-        'h1': 'clamp(2.5rem, 5vw, 4rem)',
-        'h2': 'clamp(2rem, 4vw, 3rem)',
-        'h3': 'clamp(1.5rem, 3vw, 2rem)',
+        // Premium Typography Scale with Tight Letter-Spacing
+        'display-xl': ['clamp(4rem, 8vw, 8rem)', { lineHeight: '1', letterSpacing: '-0.03em', fontWeight: '700' }],
+        'display-lg': ['clamp(3.5rem, 7vw, 7rem)', { lineHeight: '1.05', letterSpacing: '-0.03em', fontWeight: '700' }],
+        'display': ['clamp(3rem, 6vw, 6rem)', { lineHeight: '1.1', letterSpacing: '-0.025em', fontWeight: '700' }],
+        'h1': ['clamp(2.5rem, 5vw, 4.5rem)', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'h2': ['clamp(2rem, 4vw, 3.5rem)', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '600' }],
+        'h3': ['clamp(1.75rem, 3vw, 2.5rem)', { lineHeight: '1.25', letterSpacing: '-0.015em', fontWeight: '600' }],
+        'h4': ['clamp(1.5rem, 2.5vw, 2rem)', { lineHeight: '1.3', letterSpacing: '-0.01em', fontWeight: '600' }],
+        'body-xl': ['1.375rem', { lineHeight: '1.6', letterSpacing: '-0.01em' }],
+        'body-lg': ['1.25rem', { lineHeight: '1.6', letterSpacing: '-0.005em' }],
+        'body': ['1.125rem', { lineHeight: '1.7', letterSpacing: '0' }],
+        'body-sm': ['1rem', { lineHeight: '1.7', letterSpacing: '0' }],
       },
       spacing: {
-        // Premium Spacing Scale (4px base)
-        '18': '4.5rem',
-        '88': '22rem',
-        '128': '32rem',
+        // Premium Spacing Scale matching Primal Training
+        '14': '3.5rem',    // 56px
+        '18': '4.5rem',    // 72px
+        '20': '5rem',      // 80px
+        '23': '5.75rem',   // 92px
+        '88': '22rem',     // 352px
+        '128': '32rem',    // 512px
       },
       maxWidth: {
-        // Content Max Width
-        'content': '1280px',
+        // Premium Content Max Width
+        'content': '2048px',
+        'section': '1280px',
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          md: '3rem',
+          lg: '4rem',
+        },
+        screens: {
+          sm: '800px',
+          md: '1200px',
+          lg: '1280px',
+          xl: '2048px',
+        },
       },
       boxShadow: {
         // Premium Shadows

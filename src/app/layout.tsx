@@ -1,15 +1,35 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Anek_Tamil, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+// Premium Font System
+const anekTamil = Anek_Tamil({
+  subsets: ['latin'],
+  variable: '--font-anek-tamil',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-geist',
+  display: 'swap',
+  weight: ['400', '500', '600'],
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-geist-mono',
+  display: 'swap',
+  weight: ['400', '500'],
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://theskateworkshop.app'),
-  title: 'The Skate Workshop | Elite Skateboarding Coaching from a Coach of Olympians',
-  description: 'Train with Willy Santos, working with Commission Skateboard France with 30+ years of experience. Elite skateboarding coaching platform featuring premium video analysis, live session tracking, and 400+ trick database.',
+  title: 'The Skate Workshop | Professional Skateboarding Coaching from a Coach of Olympians',
+  description: 'Train with Willy Santos, working with Commission Skateboard France with 30+ years of experience. Professional skateboarding coaching platform featuring video analysis, live session tracking, and 400+ trick database.',
   keywords: 'skateboarding coaching, elite skate training, Olympic skateboard coach, Willy Santos, professional skateboarding, skate lessons',
   authors: [{ name: 'The Skate Workshop' }],
   icons: {
@@ -23,8 +43,8 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   openGraph: {
-    title: 'The Skate Workshop | Elite Skateboarding Coaching',
-    description: 'Train with Willy Santos, coach of Olympic athletes. Premium skateboarding coaching platform with video analysis, progress tracking, and expert guidance.',
+    title: 'The Skate Workshop | Professional Skateboarding Coaching',
+    description: 'Train with Willy Santos, coach of Olympic athletes. Professional skateboarding coaching platform with video analysis, progress tracking, and expert guidance.',
     url: 'https://theskateworkshop.app',
     siteName: 'The Skate Workshop',
     images: [
@@ -40,7 +60,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Skate Workshop | Elite Skateboarding Coaching',
+    title: 'The Skate Workshop | Professional Skateboarding Coaching',
     description: 'Train with Willy Santos, coach of Olympic athletes',
     images: ['/og-image.png'],
   },
@@ -52,10 +72,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={`${anekTamil.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#000000" />
+      </head>
+      <body className="overflow-x-hidden">
         <Navigation />
-        <main>{children}</main>
+        <main id="main-content" className="relative">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

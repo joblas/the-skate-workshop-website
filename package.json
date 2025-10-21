@@ -1,7 +1,22 @@
 {
   "name": "skate-workshop-web",
   "version": "1.0.0",
+  "description": "The Skate Workshop - Elite skateboarding coaching platform website featuring Olympic-level coach Willy Santos. Built with Next.js 14, TypeScript, and Tailwind CSS.",
   "private": true,
+  "author": "The Skate Workshop (Willy Santos & Joe's Tech Solutions LLC)",
+  "homepage": "https://theskateworkshop.app",
+  "keywords": [
+    "skateboarding",
+    "coaching",
+    "willy-santos",
+    "olympic-training",
+    "skate-workshop",
+    "commission-skateboard-france",
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

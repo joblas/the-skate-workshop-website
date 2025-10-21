@@ -36,7 +36,7 @@ export default function PricingPage() {
                 <span className="text-gray-400">/month</span>
               </div>
               <p className="text-gray-400 mb-8">
-                Perfect for self-motivated skaters who want access to elite training content
+                Perfect for skaters who want access to professional training content
               </p>
               
               <Link href="/download" className="btn-secondary w-full block text-center mb-8">
