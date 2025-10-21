@@ -101,18 +101,68 @@ export async function POST(request: NextRequest) {
 
     // Email 1: Notify admin
     const adminEmail = {
-      from: process.env.EMAIL_FROM || 'waitlist@theskateworkshop.app',
+      from: `"The Skate Workshop" <${process.env.EMAIL_FROM || 'waitlist@theskateworkshop.app'}>`,
+      replyTo: validatedData.email,
       to: process.env.WAITLIST_RECIPIENT || 'waitlist@theskateworkshop.app',
       subject: 'New Waitlist Signup',
+      headers: {
+        'X-Priority': '1',
+        'X-MSMail-Priority': 'High',
+        'Importance': 'high',
+        'X-Mailer': 'The Skate Workshop',
+      },
       text: `New waitlist signup:\n\nEmail: ${validatedData.email}${validatedData.name ? `\nName: ${validatedData.name}` : ''}\nDate: ${new Date().toLocaleString()}`,
+      html: `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+          <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+            <h2 style="color: #E84545; border-bottom: 2px solid #E84545; padding-bottom: 10px;">New Waitlist Signup</h2>
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+              <p><strong>Email:</strong> <a href="mailto:${validatedData.email}">${validatedData.email}</a></p>
+              ${validatedData.name ? `<p><strong>Name:</strong> ${validatedData.name}</p>` : ''}
+            </div>
+            <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
+            <p style="color: #666; font-size: 12px;">Date: ${new Date().toLocaleString()}</p>
+          </div>
+        </body>
+        </html>
+      `,
     }
 
     // Email 2: Confirm to user
     const userEmail = {
-      from: process.env.EMAIL_FROM || 'waitlist@theskateworkshop.app',
+      from: `"The Skate Workshop" <${process.env.EMAIL_FROM || 'waitlist@theskateworkshop.app'}>`,
+      replyTo: process.env.EMAIL_FROM || 'waitlist@theskateworkshop.app',
       to: validatedData.email,
       subject: 'Welcome to The Skate Workshop Waitlist!',
+      headers: {
+        'X-Mailer': 'The Skate Workshop',
+      },
       text: `${validatedData.name ? `Hey ${validatedData.name}` : 'Hey'},\n\nThanks for joining The Skate Workshop waitlist!\n\nWe'll notify you as soon as we launch. Get ready to level up your skateboarding with Willy Santos.\n\nStay tuned!\n\n- The Skate Workshop Team`,
+      html: `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+          <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+            <h2 style="color: #E84545;">Welcome to The Skate Workshop Waitlist!</h2>
+            <p>${validatedData.name ? `Hey ${validatedData.name}` : 'Hey'},</p>
+            <p>Thanks for joining The Skate Workshop waitlist!</p>
+            <p>We'll notify you as soon as we launch. Get ready to level up your skateboarding with Willy Santos.</p>
+            <p>Stay tuned!</p>
+            <p style="margin-top: 30px;">- The Skate Workshop Team</p>
+          </div>
+        </body>
+        </html>
+      `,
     }
 
     // Send both emails

@@ -109,6 +109,16 @@ export default function Footer() {
                   Terms of Service
                 </Link>
               </li>
+              <li className="pt-2 border-t border-gray-800">
+                <a href="mailto:privacy@theskateworkshop.app" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Privacy Inquiries
+                </a>
+              </li>
+              <li>
+                <a href="mailto:legal@theskateworkshop.app" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Legal Inquiries
+                </a>
+              </li>
             </ul>
           </div>
         </div>
