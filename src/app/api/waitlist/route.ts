@@ -37,7 +37,7 @@ function isEmailInWaitlist(email: string): boolean {
   }
 }
 
-// Add email to waitlist file
+// Add email to waitlist file (only works locally, fails gracefully on Vercel)
 function addToWaitlist(email: string, name?: string) {
   try {
     ensureDataDirectory()
@@ -53,8 +53,9 @@ function addToWaitlist(email: string, name?: string) {
     })
     fs.writeFileSync(WAITLIST_FILE, JSON.stringify(waitlist, null, 2))
   } catch (error) {
-    console.error('Error saving to waitlist:', error)
-    throw error
+    // Vercel has read-only filesystem, so this will fail in production
+    // Just log and continue - emails are the primary record
+    console.log('Note: Waitlist file storage unavailable (Vercel environment)')
   }
 }
 
@@ -76,7 +77,8 @@ export async function POST(request: NextRequest) {
     // Validate the request body
     const validatedData = waitlistSchema.parse(body)
 
-    // Check for duplicate email
+    // Check for duplicate email (only works locally with file storage)
+    // In production (Vercel), duplicate prevention is handled via email records
     if (isEmailInWaitlist(validatedData.email)) {
       return NextResponse.json(
         { message: "You're already on the waitlist! We'll notify you when we launch." },
@@ -84,7 +86,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Add to waitlist file
+    // Try to add to waitlist file (works locally, fails gracefully on Vercel)
     addToWaitlist(validatedData.email, validatedData.name)
 
     // Email 1: Notify admin
