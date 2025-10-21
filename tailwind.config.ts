@@ -39,9 +39,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-body)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-heading)', 'system-ui', 'sans-serif'],
-        body: ['var(--font-body)', 'system-ui', 'sans-serif'],
+        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+        heading: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+        body: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
         mono: ['ui-monospace', 'SF Mono', 'Monaco', 'monospace'],
       },
       fontSize: {

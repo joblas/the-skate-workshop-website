@@ -128,7 +128,7 @@ export default function WaitlistForm({ variant = 'embedded' }: WaitlistFormProps
             >
               <Check className="w-12 h-12 text-brand-red" />
             </motion.div>
-            <h3 className="text-3xl font-bold text-white mb-4">
+            <h3 className="text-3xl font-heading text-white mb-4">
               You're In! 🎉
             </h3>
             <p className="text-white/90 text-lg mb-6">
@@ -154,7 +154,7 @@ export default function WaitlistForm({ variant = 'embedded' }: WaitlistFormProps
             className="bg-gradient-to-br from-gray-900/80 to-gray-900/60 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-gray-800"
           >
             <div className="text-center mb-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+              <h3 className="text-2xl md:text-3xl font-heading text-white mb-3">
                 Join the Launch Waitlist
               </h3>
               <p className="text-gray-400">

@@ -25,25 +25,25 @@ export default function Footer() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-white antialiased" style={{
+                <span className="text-xl font-heading text-white antialiased" style={{
                   WebkitFontSmoothing: 'antialiased',
                   MozOsxFontSmoothing: 'grayscale',
                   textRendering: 'optimizeLegibility'
                 }}>The Skate Workshop App</span>
-                <span className="text-sm text-white/60 font-medium antialiased" style={{
+                <span className="text-sm text-white/60 font-body antialiased" style={{
                   WebkitFontSmoothing: 'antialiased',
                   MozOsxFontSmoothing: 'grayscale'
                 }}>Mobile Training App</span>
               </div>
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm font-body">
               Mobile skateboarding coaching app from Olympic-level coach Willy Santos
             </p>
           </div>
 
           {/* Platform */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Platform</h3>
+            <h3 className="font-heading text-white mb-4">Platform</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/features" className="text-gray-400 hover:text-white transition-colors text-sm">
@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Coaches */}
           <div>
-            <h3 className="font-semibold text-white mb-4">For Coaches</h3>
+            <h3 className="font-heading text-white mb-4">For Coaches</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/coaches" className="text-gray-400 hover:text-white transition-colors text-sm">

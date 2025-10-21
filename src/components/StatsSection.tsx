@@ -47,7 +47,7 @@ export default function StatsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-heading text-white mb-4">
             Proven Track Record
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
@@ -77,7 +77,7 @@ export default function StatsSection() {
                 </motion.div>
 
                 {/* Animated Counter */}
-                <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-red mb-2 group-hover:scale-105 transition-transform duration-300">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-heading text-brand-red mb-2 group-hover:scale-105 transition-transform duration-300">
                   <AnimatedCounter
                     target={stat.value}
                     prefix={stat.prefix}
@@ -87,12 +87,12 @@ export default function StatsSection() {
                 </div>
 
                 {/* Label */}
-                <div className="text-white font-semibold text-sm md:text-base mb-1">
+                <div className="text-white font-heading text-sm md:text-base mb-1">
                   {stat.label}
                 </div>
 
                 {/* Description */}
-                <div className="text-gray-400 text-xs md:text-sm">
+                <div className="text-gray-400 text-xs md:text-sm font-body">
                   {stat.description}
                 </div>
               </motion.div>

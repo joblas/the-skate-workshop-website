@@ -1,142 +1,228 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Import Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@layer base {
-  html {
-    @apply scroll-smooth;
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto;
-    text-rendering: optimizeLegibility;
-  }
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+}
 
-  body {
-    @apply bg-black text-white font-body;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto;
-    font-display: swap;
-    will-change: scroll-position;
-  }
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-display: swap;
+  will-change: scroll-position;
+}
 
-  /* Premium Typography Base */
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
-    font-display: swap;
-  }
+/* Typography Base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-display: swap;
+}
 
-  /* Performance Optimizations */
-  * {
-    -webkit-tap-highlight-color: transparent;
-  }
+/* Performance Optimizations */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
-  img, video {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 1000px;
-  }
+img, video {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px;
+}
 
-  /* Smooth scrolling for all elements */
-  * {
-    scroll-behavior: smooth;
-  }
+/* Smooth scrolling for all elements */
+* {
+  scroll-behavior: smooth;
+}
 
-  /* GPU acceleration for transforms */
-  .transform, .transition, .animate {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
+/* GPU acceleration for transforms */
+.transform, .transition, .animate {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Premium Buttons - Responsive */
+.btn-primary {
+  background-color: #E84545;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 200ms;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  min-height: 48px;
+  touch-action: manipulation;
+}
+
+.btn-primary:hover {
+  background-color: #D13939;
+  transform: scale(1.05);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+@media (min-width: 800px) {
+  .btn-primary {
+    padding: 1rem 2rem;
   }
 }
 
-@layer components {
-  /* Premium Buttons - Responsive */
-  .btn-primary {
-    @apply bg-brand-red hover:bg-brand-red-dark text-white font-semibold rounded-lg
-           transition-all duration-200 hover:scale-105 active:scale-95 text-body-sm
-           px-6 py-3 sm:px-8 sm:py-4 min-h-[48px] touch-manipulation;
-  }
+.btn-secondary {
+  border: 2px solid #E84545;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 200ms;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  min-height: 48px;
+  touch-action: manipulation;
+  background-color: transparent;
+}
 
+.btn-secondary:hover {
+  background-color: rgba(232, 69, 69, 0.1);
+}
+
+@media (min-width: 800px) {
   .btn-secondary {
-    @apply border-2 border-brand-red hover:bg-brand-red/10 text-white font-semibold rounded-lg
-           transition-all duration-200 text-body-sm
-           px-6 py-3 sm:px-8 sm:py-4 min-h-[48px] touch-manipulation;
+    padding: 1rem 2rem;
   }
+}
 
+.btn-ghost {
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 200ms;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  min-height: 44px;
+  touch-action: manipulation;
+  background-color: transparent;
+}
+
+.btn-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 800px) {
   .btn-ghost {
-    @apply hover:bg-white/5 text-white font-medium rounded-lg
-           transition-all duration-200 text-body-sm
-           px-4 py-2 sm:px-6 sm:py-3 min-h-[44px] touch-manipulation;
+    padding: 0.75rem 1.5rem;
   }
+}
 
-  /* Premium Containers */
+/* Premium Containers */
+.section-container {
+  max-width: 2048px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 800px) {
   .section-container {
-    @apply max-w-content mx-auto px-4 sm:px-8 md:px-12 lg:px-16;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
+}
 
+@media (min-width: 1200px) {
+  .section-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.content-section {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 800px) {
   .content-section {
-    @apply max-w-section mx-auto px-4 sm:px-8 md:px-12 lg:px-16;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
+}
 
-  /* Premium Typography Classes */
-  .display-xl {
-    @apply text-display-xl font-heading antialiased;
+@media (min-width: 1200px) {
+  .content-section {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
+}
 
-  .display-lg {
-    @apply text-display-lg font-heading antialiased;
+@media (min-width: 1280px) {
+  .content-section {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
+}
 
-  .display {
-    @apply text-display font-heading antialiased;
-  }
+/* Premium Glass Effects */
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
 
-  .heading-1 {
-    @apply text-h1 font-heading antialiased;
-  }
+.glass-card-hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: all 300ms;
+}
 
-  .heading-2 {
-    @apply text-h2 font-heading antialiased;
-  }
+.glass-card-hover:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
 
-  .heading-3 {
-    @apply text-h3 font-heading antialiased;
-  }
+/* Premium Spacing Utilities */
+.section-spacing {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
 
-  .heading-4 {
-    @apply text-h4 font-heading antialiased;
-  }
-
-  .body-xl {
-    @apply text-body-xl font-body antialiased;
-  }
-
-  .body-lg {
-    @apply text-body-lg font-body antialiased;
-  }
-
-  .body {
-    @apply text-body font-body antialiased;
-  }
-
-  .body-sm {
-    @apply text-body-sm font-body antialiased;
-  }
-
-  /* Premium Glass Effects */
-  .glass-card {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
-  }
-
-  .glass-card-hover {
-    @apply glass-card hover:bg-white/10 hover:border-white/20 transition-all duration-300;
-  }
-
-  /* Premium Spacing Utilities */
+@media (min-width: 800px) {
   .section-spacing {
-    @apply py-20 sm:py-23;
+    padding-top: 5.75rem;
+    padding-bottom: 5.75rem;
   }
+}
 
+.section-spacing-lg {
+  padding-top: 5.75rem;
+  padding-bottom: 5.75rem;
+}
+
+@media (min-width: 800px) {
   .section-spacing-lg {
-    @apply py-23 sm:py-32;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }
