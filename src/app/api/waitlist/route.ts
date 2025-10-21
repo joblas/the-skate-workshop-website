@@ -72,6 +72,16 @@ const transporter = nodemailer.createTransport({
 
 export async function POST(request: NextRequest) {
   try {
+    // Debug: Log environment variables (without showing password)
+    console.log('Email config check:', {
+      host: process.env.EMAIL_HOST || 'NOT SET',
+      port: process.env.EMAIL_PORT || 'NOT SET',
+      user: process.env.EMAIL_USER || 'NOT SET',
+      passwordSet: !!process.env.EMAIL_PASSWORD,
+      from: process.env.EMAIL_FROM || 'NOT SET',
+      recipient: process.env.WAITLIST_RECIPIENT || 'NOT SET',
+    })
+
     const body = await request.json()
 
     // Validate the request body
@@ -130,9 +140,19 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Log detailed error for debugging
     console.error('Waitlist API error:', error)
+    console.error('Error details:', {
+      name: error instanceof Error ? error.name : 'Unknown',
+      message: error instanceof Error ? error.message : String(error),
+      stack: error instanceof Error ? error.stack : undefined,
+    })
+
     return NextResponse.json(
-      { message: 'Failed to join waitlist. Please try again.' },
+      {
+        message: 'Failed to join waitlist. Please try again.',
+        error: error instanceof Error ? error.message : 'Unknown error'
+      },
       { status: 500 }
     )
   }
