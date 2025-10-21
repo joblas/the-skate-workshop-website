@@ -3,6 +3,7 @@ import { Anek_Tamil, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import { Analytics } from '@vercel/analytics/next'
 
 // Premium Font System
 const anekTamil = Anek_Tamil({
@@ -86,6 +87,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
