@@ -1,10 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
+import nodemailer from 'nodemailer'
 
 // Validation schema
 const waitlistSchema = z.object({
   email: z.string().email('Invalid email address'),
   name: z.string().optional(),
+})
+
+// Email transporter configuration
+const transporter = nodemailer.createTransport({
+  host: process.env.EMAIL_HOST || 'smtp.hostinger.com',
+  port: parseInt(process.env.EMAIL_PORT || '587'),
+  secure: false, // true for 465, false for other ports
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASSWORD,
+  },
 })
 
 export async function POST(request: NextRequest) {
@@ -14,47 +26,19 @@ export async function POST(request: NextRequest) {
     // Validate the request body
     const validatedData = waitlistSchema.parse(body)
 
-    // TODO: Store in database (Supabase)
-    // For now, we'll just log it and return success
-    console.log('Waitlist submission:', validatedData)
-
-    // In a real implementation, you would:
-    // 1. Check if email already exists
-    // 2. Save to Supabase waitlist table
-    // 3. Send confirmation email
-    // 4. Add to mailing list (e.g., Mailchimp, SendGrid)
-
-    // Example Supabase implementation:
-    /*
-    const { createClient } = require('@supabase/supabase-js')
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!
-    )
-
-    const { data, error } = await supabase
-      .from('waitlist')
-      .insert([
-        {
-          email: validatedData.email,
-          name: validatedData.name,
-          source: 'website',
-          created_at: new Date().toISOString(),
-        }
-      ])
-      .select()
-
-    if (error) {
-      // Check for unique constraint violation
-      if (error.code === '23505') {
-        return NextResponse.json(
-          { message: "You're already on the waitlist! Check your email for updates." },
-          { status: 400 }
-        )
-      }
-      throw error
+    // Send simple email notification
+    const emailContent = {
+      from: process.env.EMAIL_FROM || 'waitlist@theskateworkshop.app',
+      to: process.env.WAITLIST_RECIPIENT || 'waitlist@theskateworkshop.app',
+      subject: 'New Waitlist Signup',
+      text: `New waitlist signup:\n\nEmail: ${validatedData.email}${validatedData.name ? `\nName: ${validatedData.name}` : ''}\nDate: ${new Date().toLocaleString()}`,
     }
-    */
+
+    // Send the email
+    await transporter.sendMail(emailContent)
+
+    // Log for backup
+    console.log('Waitlist submission:', validatedData)
 
     return NextResponse.json(
       {
