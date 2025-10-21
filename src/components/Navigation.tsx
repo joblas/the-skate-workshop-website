@@ -49,13 +49,13 @@ export default function Navigation() {
                   MozOsxFontSmoothing: 'grayscale',
                   textRendering: 'optimizeLegibility'
                 }}>
-                  TheSkateWorkshop
+                  TheSkateWorkshop App
                 </span>
                 <span className="text-xs text-white/60 font-medium tracking-wider uppercase antialiased" style={{
                   WebkitFontSmoothing: 'antialiased',
                   MozOsxFontSmoothing: 'grayscale'
                 }}>
-                  Pro Coaching
+                  Mobile Training
                 </span>
               </div>
             </Link>

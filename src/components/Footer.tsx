@@ -12,7 +12,7 @@ export default function Footer() {
               <div className="relative w-14 h-14 flex items-center justify-center">
                 <Image
                   src="/images/logo/icon.png"
-                  alt="The Skate Workshop Logo"
+                  alt="The Skate Workshop App Logo"
                   width={56}
                   height={56}
                   className="object-contain w-full h-full antialiased"
@@ -29,15 +29,15 @@ export default function Footer() {
                   WebkitFontSmoothing: 'antialiased',
                   MozOsxFontSmoothing: 'grayscale',
                   textRendering: 'optimizeLegibility'
-                }}>The Skate Workshop</span>
+                }}>The Skate Workshop App</span>
                 <span className="text-sm text-white/60 font-medium antialiased" style={{
                   WebkitFontSmoothing: 'antialiased',
                   MozOsxFontSmoothing: 'grayscale'
-                }}>Pro Skateboarding Coaching</span>
+                }}>Mobile Training App</span>
               </div>
             </div>
             <p className="text-gray-400 text-sm">
-              Professional skateboarding coaching from Olympic-level coach Willy Santos
+              Mobile skateboarding coaching app from Olympic-level coach Willy Santos
             </p>
           </div>
 
@@ -162,7 +162,7 @@ export default function Footer() {
           
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} The Skate Workshop. All rights reserved.
+              © {new Date().getFullYear()} The Skate Workshop App. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm">
               Powered by Joe's Tech Solutions LLC

@@ -96,7 +96,7 @@ export default function HeroSection() {
             animate="visible"
             className="text-white/60 uppercase tracking-widest text-sm mb-8 font-heading antialiased"
           >
-            COACHED BY AN OLYMPIAN TRAINER
+            MOBILE TRAINING APP
           </motion.p>
 
           {/* MASSIVE headline with color accent */}

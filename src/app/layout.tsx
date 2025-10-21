@@ -29,10 +29,10 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://theskateworkshop.app'),
-  title: 'The Skate Workshop | Professional Skateboarding Coaching from a Coach of Olympians',
-  description: 'Train with Willy Santos, working with Commission Skateboard France with 30+ years of experience. Professional skateboarding coaching platform featuring video analysis, live session tracking, and 400+ trick database.',
-  keywords: 'skateboarding coaching, elite skate training, Olympic skateboard coach, Willy Santos, professional skateboarding, skate lessons',
-  authors: [{ name: 'The Skate Workshop' }],
+  title: 'The Skate Workshop App | Mobile Skateboarding Coaching from a Coach of Olympians',
+  description: 'Train with Willy Santos, working with Commission Skateboard France with 30+ years of experience. Mobile skateboarding coaching app featuring video analysis, live session tracking, and 400+ trick database.',
+  keywords: 'skateboarding app, mobile skate training, skateboarding coaching, elite skate training, Olympic skateboard coach, Willy Santos, professional skateboarding, skate lessons',
+  authors: [{ name: 'The Skate Workshop App' }],
   icons: {
     icon: [
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
@@ -44,16 +44,16 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   openGraph: {
-    title: 'The Skate Workshop | Professional Skateboarding Coaching',
-    description: 'Train with Willy Santos, coach of Olympic athletes. Professional skateboarding coaching platform with video analysis, progress tracking, and expert guidance.',
+    title: 'The Skate Workshop App | Mobile Skateboarding Coaching',
+    description: 'Train with Willy Santos, coach of Olympic athletes. Mobile skateboarding coaching app with video analysis, progress tracking, and expert guidance.',
     url: 'https://theskateworkshop.app',
-    siteName: 'The Skate Workshop',
+    siteName: 'The Skate Workshop App',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'The Skate Workshop Logo',
+        alt: 'The Skate Workshop App Logo',
       },
     ],
     locale: 'en_US',
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Skate Workshop | Professional Skateboarding Coaching',
-    description: 'Train with Willy Santos, coach of Olympic athletes',
+    title: 'The Skate Workshop App | Mobile Skateboarding Coaching',
+    description: 'Train with Willy Santos, coach of Olympic athletes. Mobile app for skaters.',
     images: ['/og-image.png'],
   },
 }
