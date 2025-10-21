@@ -56,14 +56,14 @@ export default function CoachesPage() {
       {/* Hero */}
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
-          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">FOR COACHES</p>
+          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">For fellow coaches</p>
 
           <h1 className="text-display-xl font-heading text-white mb-12 max-w-6xl">
-            JOIN WILLY'S <span className="text-brand-red">NETWORK</span>
+            Help me build a <span className="text-brand-red">supportive community</span>
           </h1>
 
           <p className="text-body-lg text-white/70 max-w-2xl mb-8">
-            Earn 70% of coaching revenue. Access professional tools. Associate with Olympic-level credibility.
+            I'm looking for passionate coaches who share my love for helping skaters grow. Together, we can create something special - a place where every skater feels supported and encouraged to reach their potential.
           </p>
         </div>
       </section>
@@ -72,28 +72,28 @@ export default function CoachesPage() {
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
           <h2 className="text-h2 font-heading text-white mb-20 text-center">
-            WHAT YOU <span className="text-brand-red">GET</span>
+            What we can <span className="text-brand-red">build together</span>
           </h2>
 
           <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
             <div className="border-l-2 border-brand-red pl-6">
-              <h3 className="text-h4 font-heading text-white mb-3">70% REVENUE</h3>
+              <h3 className="text-h4 font-heading text-white mb-3">Fair Partnership</h3>
               <p className="text-body-sm text-white/60">
-                Keep most of what you earn. We handle the tech.
+                You keep 70% of what you earn because your coaching is the heart of what we do. I'll handle the technology so you can focus on what you love.
               </p>
             </div>
 
             <div className="border-l-2 border-brand-red pl-6">
-              <h3 className="text-h4 font-heading text-white mb-3">PRO TOOLS</h3>
+              <h3 className="text-h4 font-heading text-white mb-3">Great Tools</h3>
               <p className="text-body-sm text-white/60">
-                Video analysis. Session tracking. Progress reports.
+                I've spent years developing tools that actually help - video analysis, progress tracking, and reporting features that make coaching easier and more effective.
               </p>
             </div>
 
             <div className="border-l-2 border-brand-red pl-6">
-              <h3 className="text-h4 font-heading text-white mb-3">CREDIBILITY</h3>
+              <h3 className="text-h4 font-heading text-white mb-3">Supportive Network</h3>
               <p className="text-body-sm text-white/60">
-                Associate with Willy's Olympic-level reputation.
+                Join a community of coaches who genuinely care about helping skaters. We'll support each other and share what works.
               </p>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function CoachesPage() {
         <div className="section-container">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-h2 font-heading text-white mb-12 text-center">
-              APPLY <span className="text-brand-red">NOW</span>
+              I'd love to <span className="text-brand-red">hear from you</span>
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -183,7 +183,7 @@ export default function CoachesPage() {
                 type="submit"
                 className="w-full btn-primary text-lg py-4"
               >
-                SUBMIT APPLICATION
+                Send my application
               </button>
             </form>
           </div>

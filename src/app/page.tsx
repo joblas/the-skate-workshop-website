@@ -11,18 +11,18 @@ export default function HomePage() {
       {/* WHO THIS IS FOR */}
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
-          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">FOR THE COMMITTED</p>
+          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">For everyone who loves skating</p>
 
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-display font-heading text-white mb-8">
-                TRAINING THAT <span className="text-brand-red">ACTUALLY WORKS.</span>
+                I'd love to <span className="text-brand-red">help you improve</span>
               </h2>
               <p className="text-body text-white/70 max-w-xl mb-6">
-                Get coached by Willy Santos, the same coach who trained Olympic athletes. Video breakdowns, trick tracking, and real feedback.
+                Whether you're just starting out or looking to nail that next trick, I'm here to help. We'll work together with video breakdowns, progress tracking, and personal feedback.
               </p>
               <p className="text-body text-white/70 max-w-xl">
-                Learn from someone who's been there. Let's get you skating better.
+                I've been skating and coaching for over 30 years, and I genuinely love helping people get better at this amazing sport.
               </p>
             </div>
             <div className="relative h-[500px] bg-gray-900/30 rounded-2xl overflow-hidden">
@@ -39,31 +39,31 @@ export default function HomePage() {
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
           <h2 className="text-h2 font-heading text-white mb-20 text-center">
-            WHAT YOU <span className="text-brand-red">GET</span>
+            Here's how we'll <span className="text-brand-red">work together</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Video Analysis */}
             <div className="border-l-2 border-brand-red pl-8">
-              <h3 className="text-h4 font-heading text-white mb-4">VIDEO ANALYSIS</h3>
+              <h3 className="text-h4 font-heading text-white mb-4">Personal Feedback</h3>
               <p className="text-body-sm text-white/60">
-                Send clips. Get feedback from a real Olympic coach. Not just likes and comments.
+                Send me your clips and I'll give you helpful feedback to improve your technique. Real coaching, not just social media likes.
               </p>
             </div>
 
             {/* Track Progress */}
             <div className="border-l-2 border-brand-red pl-8">
-              <h3 className="text-h4 font-heading text-white mb-4">TRACK PROGRESS</h3>
+              <h3 className="text-h4 font-heading text-white mb-4">Track Your Growth</h3>
               <p className="text-body-sm text-white/60">
-                400+ tricks. Log every session. See yourself actually getting better.
+                We'll keep track of your progress together. 400+ tricks to work on, and you'll be amazed how much you improve over time.
               </p>
             </div>
 
             {/* Battle Friends */}
             <div className="border-l-2 border-brand-red pl-8">
-              <h3 className="text-h4 font-heading text-white mb-4">BATTLE FRIENDS</h3>
+              <h3 className="text-h4 font-heading text-white mb-4">Have Fun with Friends</h3>
               <p className="text-body-sm text-white/60">
-                Game of SKATE. Leaderboards. Prove you're the best in your crew.
+                Play games of SKATE with your crew, share your progress, and celebrate each other's wins. Skating is more fun together!
               </p>
             </div>
           </div>
@@ -73,18 +73,18 @@ export default function HomePage() {
       {/* WHO IS WILLY - Full Screen Impact */}
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
-          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">WHO'S COACHING YOU</p>
+          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">A little about me</p>
 
           <div className="max-w-4xl">
             <h2 className="text-display-lg font-heading text-white mb-12">
-              COACHED <span className="text-brand-red">OLYMPIANS.</span><br/>
-              NOW COACHING <span className="text-brand-red">YOU.</span>
+              I'm just a guy who <span className="text-brand-red">loves skateboarding</span><br/>
+              and helping <span className="text-brand-red">others love it too</span>
             </h2>
             <p className="text-body-lg text-white/70 max-w-2xl mb-8">
-              Willy Santos. 30+ years. Commission Skateboard France. Trained Olympic athletes and X-Games medalists.
+              I'm Willy Santos, and I've been incredibly fortunate to work with some amazing skaters over the past 30+ years, including Olympic athletes. But honestly, what I love most is helping everyday skaters discover the joy of progression.
             </p>
-            <Link href="/about" className="text-brand-red hover:text-brand-red-light text-lg font-heading uppercase tracking-wide">
-              MEET WILLY →
+            <Link href="/about" className="text-brand-red hover:text-brand-red-light text-lg font-heading tracking-wide">
+              Get to know me better →
             </Link>
           </div>
         </div>
@@ -93,14 +93,14 @@ export default function HomePage() {
       {/* BIG CTA - Centered */}
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container text-center">
-          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">READY?</p>
+          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">Ready to start?</p>
 
           <h2 className="text-display font-heading text-white mb-12 max-w-5xl mx-auto">
-            JOIN THE <span className="text-brand-red">WORKSHOP</span>
+            Come skate with <span className="text-brand-red">our community</span>
           </h2>
 
           <Link href="/download" className="btn-primary text-lg px-16 py-6 inline-block">
-            JOIN WAITLIST
+            Join the Community
           </Link>
         </div>
       </section>

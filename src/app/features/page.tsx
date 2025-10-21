@@ -12,14 +12,14 @@ export default function FeaturesPage() {
       {/* Hero */}
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
-          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">WHAT'S INSIDE</p>
+          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">How I can help you</p>
 
           <h1 className="text-display-xl font-heading text-white mb-12 max-w-6xl">
-            TOOLS THAT <span className="text-brand-red">WORK.</span>
+            Simple tools to help you <span className="text-brand-red">improve and have fun</span>
           </h1>
 
           <p className="text-body-lg text-white/70 max-w-2xl">
-            Built by an Olympic coach who knows what actually helps skaters improve.
+            I've spent years figuring out what really helps skaters grow. These are the tools and features I'm most excited to share with you.
           </p>
         </div>
       </section>
@@ -30,13 +30,13 @@ export default function FeaturesPage() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-display font-heading text-white mb-8">
-                VIDEO <span className="text-brand-red">ANALYSIS</span>
+                Personal <span className="text-brand-red">video feedback</span>
               </h2>
               <p className="text-body text-white/70 mb-8">
-                Send your clips. Get feedback from Willy or his coach network. Frame-by-frame breakdown. Drawing tools. Voice notes.
+                Send me your clips and I'll give you helpful, specific feedback to improve your technique. I'll break it down frame by frame, draw on your videos, and send you voice notes with tips that are just for you.
               </p>
               <p className="text-body-sm text-white/50">
-                0.25x-2x playback speed • Drawing annotations • Audio feedback
+                Slow motion playback • Drawing tools • Personal voice notes
               </p>
             </div>
 
@@ -57,13 +57,13 @@ export default function FeaturesPage() {
 
             <div className="order-1 md:order-2">
               <h2 className="text-display font-heading text-white mb-8">
-                TRACK <span className="text-brand-red">EVERYTHING</span>
+                Watch yourself <span className="text-brand-red">grow</span>
               </h2>
               <p className="text-body text-white/70 mb-8">
-                400+ tricks. Every stance. Every obstacle. Log every session. See your progress over weeks and months.
+                We'll keep track of your progress together! With over 400 tricks to work on, you can log every session and see how much you've improved over time. It's really motivating to look back and see how far you've come.
               </p>
               <p className="text-body-sm text-white/50">
-                One-tap logging • 4-stage mastery system • Session analytics
+                Easy session logging • Progress tracking • Celebrate your wins
               </p>
             </div>
           </div>
@@ -76,13 +76,13 @@ export default function FeaturesPage() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-display font-heading text-white mb-8">
-                BATTLE <span className="text-brand-red">FRIENDS</span>
+                Have fun with <span className="text-brand-red">your crew</span>
               </h2>
               <p className="text-body text-white/70 mb-8">
-                Game of SKATE. Leaderboards. Vote on attempts. Compete with your crew or skaters worldwide.
+                Play games of SKATE with your friends, share your progress, and cheer each other on! You can challenge your local crew or connect with skaters from around the world. It's all about having fun and supporting each other.
               </p>
               <p className="text-body-sm text-white/50">
-                Live battles • Community voting • Leaderboards
+                Games of SKATE • Share progress • Support your friends
               </p>
             </div>
 
@@ -97,49 +97,49 @@ export default function FeaturesPage() {
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
           <h2 className="text-h2 font-heading text-white mb-20 text-center">
-            AND <span className="text-brand-red">MORE</span>
+            Plus lots of other <span className="text-brand-red">helpful features</span>
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="border-l-2 border-brand-red pl-6">
-              <h3 className="text-h4 font-heading text-white mb-3">COACH CHAT</h3>
+              <h3 className="text-h4 font-heading text-white mb-3">Chat with Me</h3>
               <p className="text-body-sm text-white/60">
-                Direct messaging with your coach. Get the help you need.
+                Message me directly whenever you have questions or need encouragement. I'm here to help!
               </p>
             </div>
 
             <div className="border-l-2 border-brand-red pl-6">
-              <h3 className="text-h4 font-heading text-white mb-3">PROGRESS REPORTS</h3>
+              <h3 className="text-h4 font-heading text-white mb-3">Progress Reports</h3>
               <p className="text-body-sm text-white/60">
-                Professional reports for sponsors and parents.
+                Share your progress with parents, sponsors, or just keep track of your own growth journey.
               </p>
             </div>
 
             <div className="border-l-2 border-brand-red pl-6">
-              <h3 className="text-h4 font-heading text-white mb-3">DAILY CHALLENGES</h3>
+              <h3 className="text-h4 font-heading text-white mb-3">Daily Motivation</h3>
               <p className="text-body-sm text-white/60">
-                XP, streaks, achievements. Stay motivated.
+                Fun challenges and goals to keep you excited about skating every day.
               </p>
             </div>
 
             <div className="border-l-2 border-brand-red pl-6">
-              <h3 className="text-h4 font-heading text-white mb-3">TEAM MGMT</h3>
+              <h3 className="text-h4 font-heading text-white mb-3">For Coaches Too</h3>
               <p className="text-body-sm text-white/60">
-                Track multiple athletes. Perfect for coaches.
+                If you coach multiple skaters, you can track all their progress in one place.
               </p>
             </div>
 
             <div className="border-l-2 border-brand-red pl-6">
-              <h3 className="text-h4 font-heading text-white mb-3">SKILL TREES</h3>
+              <h3 className="text-h4 font-heading text-white mb-3">Learning Path</h3>
               <p className="text-body-sm text-white/60">
-                Visual progression. See what to learn next.
+                Visual guides to show you what tricks to work on next based on what you already know.
               </p>
             </div>
 
             <div className="border-l-2 border-brand-red pl-6">
-              <h3 className="text-h4 font-heading text-white mb-3">OFFLINE MODE</h3>
+              <h3 className="text-h4 font-heading text-white mb-3">Works Anywhere</h3>
               <p className="text-body-sm text-white/60">
-                Log sessions at the park. Sync when home.
+                Log your sessions at the park and sync everything when you get home.
               </p>
             </div>
           </div>
@@ -149,14 +149,14 @@ export default function FeaturesPage() {
       {/* CTA */}
       <section className="section-spacing-lg">
         <div className="section-container text-center">
-          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">READY?</p>
+          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">Excited to get started?</p>
 
           <h2 className="text-display font-heading text-white mb-12 max-w-5xl mx-auto">
-            START <span className="text-brand-red">TRAINING</span>
+            Let's start <span className="text-brand-red">skating together</span>
           </h2>
 
           <Link href="/download" className="btn-primary text-lg px-16 py-6 inline-block">
-            JOIN WAITLIST
+            Join our community
           </Link>
         </div>
       </section>

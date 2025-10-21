@@ -99,24 +99,24 @@ export default function HeroSection() {
             MOBILE TRAINING APP
           </motion.p>
 
-          {/* MASSIVE headline with color accent */}
+          {/* Warm, welcoming headline */}
           <motion.h1
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="text-display-xl font-heading text-white mb-12 max-w-6xl antialiased"
           >
-            SKATE HARD. <span className="text-brand-red">LEVEL UP.</span>
+            Let's skate together and <span className="text-brand-red">have some fun</span>
           </motion.h1>
 
-          {/* Minimal subtitle */}
+          {/* Personal, humble subtitle */}
           <motion.p
             variants={subtitleVariants}
             initial="hidden"
             animate="visible"
             className="text-body-lg text-white/80 mb-14 max-w-2xl font-body antialiased"
           >
-            Train with Willy Santos, coach of Olympic athletes. Learn the techniques that actually work.
+            Hi, I'm Willy Santos. I've been lucky to coach some amazing skaters over the years, and I'd love to help you improve your skating too.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -131,7 +131,7 @@ export default function HeroSection() {
                 href="/download"
                 className="btn-primary text-lg px-12 py-5"
               >
-                JOIN WAITLIST
+                Join the Community
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
@@ -139,7 +139,7 @@ export default function HeroSection() {
                 href="/about"
                 className="btn-ghost text-lg px-12 py-5"
               >
-                MEET WILLY
+                Get to Know Willy
               </Link>
             </motion.div>
           </motion.div>

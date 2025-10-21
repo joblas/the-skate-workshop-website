@@ -1,4 +1,4 @@
-# 🎉 Your Marketing Website is Ready!
+i # 🎉 Your Marketing Website is Ready!
 
 **Location**: `C:\Users\blasj\Desktop\the-skate-workshop-website`  
 **Domain**: theskateworkshop.app (Hostinger)  

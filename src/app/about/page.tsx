@@ -13,18 +13,18 @@ export default function AboutPage() {
       {/* Hero Section - Minimal */}
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
-          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">ABOUT WILLY</p>
+          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">Meet Willy</p>
 
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h1 className="text-display-xl font-heading text-white mb-12">
-                COACHED <span className="text-brand-red">OLYMPIANS</span>
+                Family man, skater, <span className="text-brand-red">community helper</span>
               </h1>
               <p className="text-body-lg text-white/80 mb-8 max-w-xl">
-                Hey, I'm Willy Santos. I've been coaching for over 30 years, working with Commission Skateboard France, X-Games medalists, and Olympic competitors.
+                Hey there! I'm Willy Santos. When I'm not spending time with my family, you'll find me at the local skate park helping kids land their first kickflip or working with skaters who dream of competing at the highest level.
               </p>
               <p className="text-body text-white/60 max-w-xl">
-                I love helping skaters at every level find their flow and push their limits. Let's work together.
+                I've been incredibly blessed to work with some amazing athletes over the years, but what really fills my heart is seeing the joy on someone's face when they finally nail that trick they've been working on.
               </p>
             </div>
 
@@ -45,7 +45,7 @@ export default function AboutPage() {
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
           <h2 className="text-h2 font-heading text-white mb-20 text-center">
-            WHO HE'S <span className="text-brand-red">COACHED</span>
+            Some amazing people I've <span className="text-brand-red">worked with</span>
           </h2>
 
           {/* Notable Athletes - Clean Grid */}
@@ -88,7 +88,7 @@ export default function AboutPage() {
           </div>
 
           <p className="text-body-sm text-white/50 text-center mt-16 max-w-2xl mx-auto">
-            Olympic athletes. X-Games medalists. Commission Skateboard France team. They all train with Willy.
+            I've been incredibly fortunate to work with Olympic athletes, X-Games medalists, and the Commission Skateboard France team. Each one has taught me something new about dedication and passion for skating.
           </p>
         </div>
       </section>
@@ -96,33 +96,33 @@ export default function AboutPage() {
       {/* WHAT HE BELIEVES */}
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
-          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">COACHING PHILOSOPHY</p>
+          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">How I like to help</p>
 
           <div className="max-w-4xl">
             <h2 className="text-display-lg font-heading text-white mb-12">
-              BUILD THE <span className="text-brand-red">FOUNDATION.</span><br/>
-              MASTER THE <span className="text-brand-red">BASICS.</span>
+              Start with the <span className="text-brand-red">fundamentals</span><br/>
+              and have <span className="text-brand-red">fun along the way</span>
             </h2>
 
             <div className="grid md:grid-cols-3 gap-10">
               <div className="border-l-2 border-brand-red pl-6">
-                <h3 className="text-h4 font-heading text-white mb-3">TECHNIQUE FIRST</h3>
+                <h3 className="text-h4 font-heading text-white mb-3">Build Strong Foundations</h3>
                 <p className="text-body-sm text-white/60">
-                  Get the basics right and everything else follows.
+                  I believe in getting the basics solid first. Once you have good fundamentals, everything else becomes so much easier and more fun.
                 </p>
               </div>
 
               <div className="border-l-2 border-brand-red pl-6">
-                <h3 className="text-h4 font-heading text-white mb-3">SYSTEMATIC GROWTH</h3>
+                <h3 className="text-h4 font-heading text-white mb-3">Take It Step by Step</h3>
                 <p className="text-body-sm text-white/60">
-                  We'll work through 400+ tricks together, step by step.
+                  There's no rush! We'll work through tricks together at your pace. I've got 400+ tricks we can explore, but we'll go one step at a time.
                 </p>
               </div>
 
               <div className="border-l-2 border-brand-red pl-6">
-                <h3 className="text-h4 font-heading text-white mb-3">REAL FEEDBACK</h3>
+                <h3 className="text-h4 font-heading text-white mb-3">Personal Support</h3>
                 <p className="text-body-sm text-white/60">
-                  Personal video analysis tailored just for you.
+                  Everyone learns differently, so I'll give you feedback that's tailored to your style and goals. We're in this together!
                 </p>
               </div>
             </div>
@@ -134,14 +134,14 @@ export default function AboutPage() {
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-white/60 uppercase tracking-widest text-sm mb-8">ALSO FROM WILLY</p>
+            <p className="text-white/60 uppercase tracking-widest text-sm mb-8">When I'm not coaching</p>
             
             <h2 className="text-display-lg font-heading text-white mb-8">
-              CUSTOM <span className="text-brand-red">SKATEBOARDS</span>
+              I love building <span className="text-brand-red">custom skateboards</span>
             </h2>
             
             <p className="text-body-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              When I'm not coaching, I'm crafting custom skateboards. Check out my workshop where I build boards for skaters who want something truly unique.
+              Skateboarding has always been about creativity and personal expression. In my workshop, I craft custom boards for skaters who want something that's uniquely theirs. It's another way I get to be part of the skating community.
             </p>
             
             <Link 
@@ -150,7 +150,7 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               className="btn-secondary text-lg px-12 py-4 inline-block"
             >
-              VISIT WILLY'S WORKSHOP
+              Check out my workshop
             </Link>
           </div>
         </div>
@@ -159,14 +159,14 @@ export default function AboutPage() {
       {/* BIG CTA */}
       <section className="section-spacing-lg">
         <div className="section-container text-center">
-          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">READY TO LEVEL UP?</p>
+          <p className="text-white/60 uppercase tracking-widest text-sm mb-8">Want to skate together?</p>
 
           <h2 className="text-display font-heading text-white mb-12 max-w-5xl mx-auto">
-            TRAIN WITH <span className="text-brand-red">WILLY</span>
+            I'd love to help you on <span className="text-brand-red">your skating journey</span>
           </h2>
 
           <Link href="/download" className="btn-primary text-lg px-16 py-6 inline-block">
-            JOIN WAITLIST
+            Join our community
           </Link>
         </div>
       </section>
