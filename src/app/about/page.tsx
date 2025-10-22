@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import TwemojiWrapper from '@/components/Twemoji'
 
 export const metadata: Metadata = {
   title: 'About Willy Santos | Olympic Coach',
@@ -48,14 +49,14 @@ export default function AboutPage() {
           {/* Notable Athletes - Clean Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
             {[
-              { name: "Lucie Schoonheere", flag: "🇧🇪", img: "/images/athletes/lucie-schoonheere.jpg", ig: "lucie_schoonheere" },
-              { name: "Vincent Milou", flag: "🇫🇷", img: "/images/athletes/vincent-milou.jpg", ig: "vincentmilou" },
-              { name: "Bryce Wettstein", flag: "🇺🇸", img: "/images/athletes/bryce-wettstein.jpg", ig: "brycewettstein" },
-              { name: "Sakura Yosozumi", flag: "🥇", img: "/images/athletes/sakura-yosozumi.jpg", ig: "sakura_yosozumi" },
-              { name: "Joseph Garbaccio", flag: "🇫🇷", img: "/images/athletes/joseph-garbaccio.jpg", ig: "joseph_garbaccio" },
+              { name: "Lucie Schoonheere", flag: "🇫🇷🥇", img: "/images/athletes/lucie-schoonheere.jpg", ig: "lucie_schoonheere" },
+              { name: "Vincent Milou", flag: "🇫🇷🏅", img: "/images/athletes/vincent-milou.jpg", ig: "vincentmilou" },
+              { name: "Bryce Wettstein", flag: "🇺🇸🏅", img: "/images/athletes/bryce-wettstein.jpg", ig: "brycewettstein" },
+              { name: "Sakura Yosozumi", flag: "🇯🇵🥇", img: "/images/athletes/sakura-yosozumi.jpg", ig: "sakura_yosozumi" },
+              { name: "Joseph Garbaccio", flag: "🇫🇷🏆", img: "/images/athletes/joseph-garbaccio.jpg", ig: "joseph_garbaccio" },
               { name: "Mazel Paris", flag: "🇵🇭", img: "/images/athletes/mazel-paris.jpg", ig: "mazelparis" },
-              { name: "Ichiro Tanabe", flag: "🇯🇵", img: "/images/athletes/ichiro-tanabe.jpg", ig: "t.ichiro04" },
-              { name: "Nana Conda", flag: "🇫🇷", img: "/images/athletes/nana-conda.jpg", ig: "nanacondaskate" },
+              { name: "Ichiro Tsuzuki", flag: "🇯🇵", img: "/images/athletes/ichiro-tsuzuki.jpg", ig: "t.ichiro04" },
+              { name: "Nana Conda", flag: "🇫🇷🏅", img: "/images/athletes/nana-conda.jpg", ig: "nanacondaskate" },
               { name: "Noé Montagard", flag: "🇫🇷", img: "/images/athletes/noe-montagard.jpg", ig: "noe_montagard" },
               { name: "Tom Martin", flag: "🇫🇷", img: "/images/athletes/tom-martin.jpg", ig: "tom.martin.13" },
             ].map((athlete) => (
@@ -75,7 +76,9 @@ export default function AboutPage() {
                   />
                 </div>
                 <div className="text-center">
-                  <p className="text-lg mb-1">{athlete.flag}</p>
+                  <TwemojiWrapper className="text-lg mb-1 block">
+                    {athlete.flag}
+                  </TwemojiWrapper>
                   <p className="text-sm text-white/80 font-heading group-hover:text-brand-red transition-colors">
                     {athlete.name.toUpperCase()}
                   </p>
