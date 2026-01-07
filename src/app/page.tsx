@@ -75,16 +75,28 @@ export default function HomePage() {
         <div className="section-container">
           <p className="text-white/60 uppercase tracking-widest text-sm mb-8">A little about me</p>
 
-          <div className="max-w-4xl">
-            <h2 className="text-display-lg font-heading text-white mb-12">
-              30+ years of experience <span className="text-brand-primary">helping skaters grow</span>
-            </h2>
-            <p className="text-body-lg text-white/70 max-w-2xl mb-8">
-              I'm Willy Santos, and I've been incredibly fortunate to work with some amazing skaters over the past 30+ years, including Olympic athletes. But honestly, what I love most is helping everyday skaters discover the joy of progression.
-            </p>
-            <Link href="/about" className="text-brand-primary hover:text-brand-primary/80 text-lg font-heading tracking-wide">
-              Get to know me better →
-            </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-4xl">
+              <h2 className="text-display-lg font-heading text-white mb-12">
+                30+ years of experience <span className="text-brand-primary">helping skaters grow</span>
+              </h2>
+              <p className="text-body-lg text-white/70 max-w-2xl mb-8">
+                I'm Willy Santos, and I've been incredibly fortunate to work with some amazing skaters over the past 30+ years, including Olympic athletes. But honestly, what I love most is helping everyday skaters discover the joy of progression.
+              </p>
+              <Link href="/about" className="text-brand-primary hover:text-brand-primary/80 text-lg font-heading tracking-wide">
+                Get to know me better →
+              </Link>
+            </div>
+
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group bg-white/5">
+              <Image
+                src="/images/Transworld-Skateboarding-Trick-Tips-with-Willy-Santos-VHS.webp"
+                alt="Willy Santos VHS Trick Tips"
+                fill
+                className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+            </div>
           </div>
         </div>
       </section>
