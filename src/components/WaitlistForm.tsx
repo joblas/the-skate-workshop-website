@@ -40,7 +40,7 @@ export default function WaitlistForm({ variant = 'embedded' }: WaitlistFormProps
     const count = 100
     const defaults = {
       origin: { y: 0.7 },
-      colors: ['#E84545', '#FF5555', '#FFFFFF'],
+      colors: ['#FC4C02', '#FF6B35', '#FFFFFF'],
     }
 
     function fire(particleRatio: number, opts: any) {
@@ -115,10 +115,12 @@ export default function WaitlistForm({ variant = 'embedded' }: WaitlistFormProps
           // Success State
           <motion.div
             key="success"
+            role="status"
+            aria-live="polite"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="bg-gradient-to-br from-brand-red to-brand-red-dark rounded-2xl p-8 md:p-12 text-center"
+            className="bg-gradient-to-br from-brand-primary to-brand-primary/80 rounded-2xl p-8 md:p-12 text-center"
           >
             <motion.div
               initial={{ scale: 0 }}
@@ -126,7 +128,7 @@ export default function WaitlistForm({ variant = 'embedded' }: WaitlistFormProps
               transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
               className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6"
             >
-              <Check className="w-12 h-12 text-brand-red" />
+              <Check className="w-12 h-12 text-brand-primary" />
             </motion.div>
             <h3 className="text-3xl font-heading text-white mb-4">
               You're In! 🎉
@@ -138,7 +140,7 @@ export default function WaitlistForm({ variant = 'embedded' }: WaitlistFormProps
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsSuccess(false)}
-              className="bg-white text-brand-red font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              className="bg-white text-brand-primary font-bold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
               Add Another Email
             </motion.button>
@@ -181,7 +183,7 @@ export default function WaitlistForm({ variant = 'embedded' }: WaitlistFormProps
                       transition-all duration-200 focus:outline-none focus:ring-2
                       ${errors.email
                         ? 'border-error focus:ring-error/50'
-                        : 'border-gray-700 focus:ring-brand-red focus:border-brand-red'
+                        : 'border-white/10 focus:ring-brand-primary focus:border-brand-primary'
                       }`}
                   />
                   {isValid && !errors.email && (
@@ -200,6 +202,7 @@ export default function WaitlistForm({ variant = 'embedded' }: WaitlistFormProps
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
+                      role="alert"
                       className="text-error text-sm mt-2"
                     >
                       {errors.email.message}
@@ -219,7 +222,7 @@ export default function WaitlistForm({ variant = 'embedded' }: WaitlistFormProps
                   type="text"
                   placeholder="Your name"
                   className="w-full px-4 py-4 bg-black/40 border border-gray-700 rounded-lg text-white placeholder-gray-500
-                    transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-brand-red"
+                    transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-brand-primary"
                 />
               </div>
 
@@ -230,6 +233,7 @@ export default function WaitlistForm({ variant = 'embedded' }: WaitlistFormProps
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
+                    role="alert"
                     className="bg-error/10 border border-error/30 rounded-lg p-4 text-error text-sm"
                   >
                     {errorMessage}
@@ -247,7 +251,7 @@ export default function WaitlistForm({ variant = 'embedded' }: WaitlistFormProps
                   flex items-center justify-center gap-2
                   ${isSubmitting || !isValid
                     ? 'bg-gray-700 text-gray-400 cursor-not-allowed'
-                    : 'bg-brand-red hover:bg-brand-red-dark text-white shadow-lg hover:shadow-glow'
+                    : 'bg-brand-primary hover:bg-brand-primary/90 text-white shadow-lg hover:shadow-glow'
                   }`}
               >
                 {isSubmitting ? (

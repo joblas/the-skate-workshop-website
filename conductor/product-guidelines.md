@@ -17,9 +17,9 @@ The website's design must strictly adhere to the new **Primal Training Inspired*
 *   **High Contrast:** Maintain a stark Black/White/Orange palette.
 
 ### Color Palette (Synced with Mobile App)
-*   **Primary Brand:** `Orange #FC5200` (Replaces previous Red). Used for primary actions, badges, and focus states.
+*   **Primary Brand:** `Orange #FC4C02` (Strava Orange). Used for primary actions, badges, and focus states.
 *   **Secondary Brand:** `Cyan #00D9FF` (Accent). Used for "Elite" badges and special elements.
-*   **Background:** `Black #000000` (Pure Black).
+*   **Background:** `Dark Grey #121212` (Softer Dark Mode).
 *   **Surface:** `Gray #1F2937` (Dark Gray). Used for cards, inputs, and navigation backgrounds.
 *   **Text:**
     *   Primary: `White #FFFFFF`

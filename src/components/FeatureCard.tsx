@@ -49,6 +49,14 @@ export default function FeatureCard({ icon, title, description, highlighted = fa
   return (
     <motion.div
       ref={cardRef}
+      role="article"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          // Optional: trigger click action if defined
+        }
+      }}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -66,18 +74,18 @@ export default function FeatureCard({ icon, title, description, highlighted = fa
         transition: isHovered ? 'transform 0.1s ease-out' : 'transform 0.3s ease-out',
       }}
       className={`
-        relative bg-gray-900/50 backdrop-blur-sm rounded-xl p-6
+        relative bg-surface/80 backdrop-blur-sm rounded-xl p-6
         transition-all duration-300 cursor-pointer
         ${highlighted
-          ? 'border-2 border-brand-red/50 shadow-glow'
-          : 'border border-gray-800 hover:border-brand-red/50'
+          ? 'border-2 border-brand-secondary/50 shadow-glow'
+          : 'border border-white/10 hover:border-brand-primary/50'
         }
         ${isHovered && !shouldReduceMotion ? 'shadow-2xl' : 'shadow-lg'}
       `}
     >
       {/* Gradient overlay on hover */}
       <div
-        className={`absolute inset-0 rounded-xl bg-gradient-to-br from-brand-red/0 to-brand-red/5 opacity-0 transition-opacity duration-300 ${
+        className={`absolute inset-0 rounded-xl bg-gradient-to-br from-brand-primary/0 to-brand-primary/5 opacity-0 transition-opacity duration-300 ${
           isHovered ? 'opacity-100' : ''
         }`}
       />
@@ -110,7 +118,7 @@ export default function FeatureCard({ icon, title, description, highlighted = fa
       {/* Highlight indicator */}
       {highlighted && (
         <div className="absolute top-3 right-3">
-          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-brand-red/20 text-brand-red border border-brand-red/30">
+          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-brand-secondary/20 text-brand-secondary border border-brand-secondary/30">
             Featured
           </span>
         </div>

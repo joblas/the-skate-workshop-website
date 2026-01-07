@@ -2,11 +2,24 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { ChevronDown, Award } from 'lucide-react'
+import { useRef } from 'react'
 
 export default function HeroSection() {
   const shouldReduceMotion = useReducedMotion()
+  const containerRef = useRef<HTMLDivElement>(null)
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  })
+
+  // Parallax: background moves slower than content
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"])
+  
+  // Optional: fade out background as we scroll past
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.3])
 
   // Container animation variants
   const containerVariants = {
@@ -72,9 +85,12 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative bg-black py-23 md:py-32 lg:py-40 overflow-hidden min-h-screen flex items-center border-b border-white/10">
-      {/* Hero Background Image */}
-      <div className="absolute inset-0 z-0">
+    <section ref={containerRef} className="relative bg-background py-24 md:py-32 lg:py-40 overflow-hidden min-h-screen flex items-center border-b border-white/10">
+      {/* Hero Background Image with Parallax */}
+      <motion.div 
+        style={{ y: shouldReduceMotion ? 0 : y, opacity }}
+        className="absolute inset-0 z-0"
+      >
         <Image
           src="https://theresandiego.com/wp-content/uploads/Willy-Santos-5.jpg"
           alt="Willy Santos skateboarding"
@@ -83,9 +99,9 @@ export default function HeroSection() {
           priority
           quality={90}
         />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/60"></div>
-      </div>
+        {/* Lighter overlay for better visibility of the photo (30% instead of 60%) */}
+        <div className="absolute inset-0 bg-black/30"></div>
+      </motion.div>
       
       <div className="section-container relative z-10" id="main-content">
         <div className="max-w-7xl mx-auto">
@@ -106,7 +122,7 @@ export default function HeroSection() {
             animate="visible"
             className="text-display-lg font-heading text-white mb-12 max-w-6xl antialiased"
           >
-            Take your skating to the <span className="text-brand-red">next level</span>
+            Take your skating to the <span className="text-brand-primary">next level</span>
           </motion.h1>
 
           {/* Minimal subtitle */}
@@ -145,6 +161,16 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.5, duration: 1, repeat: Infinity, repeatType: "reverse" }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/30 hidden md:block"
+      >
+        <ChevronDown size={32} />
+      </motion.div>
     </section>
   )
 }

@@ -19,7 +19,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h1 className="text-display-xl font-heading text-white mb-12">
-                World Class <span className="text-brand-red">Skate Mentor</span>
+                World Class <span className="text-brand-primary">Skate Mentor</span>
               </h1>
               <p className="text-body-lg text-white/80 mb-8 max-w-xl">
                 Hey, I'm Willy Santos. I've been coaching for over 30 years, working with Commission Skateboard France, X-Games medalists, and Olympic competitors. I love helping skaters at every level find their flow and push their limits. Let's work together.
@@ -43,7 +43,7 @@ export default function AboutPage() {
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
           <h2 className="text-h2 font-heading text-white mb-20 text-center">
-            Some amazing people I've <span className="text-brand-red">worked with</span>
+            Some amazing people I've <span className="text-brand-primary">worked with</span>
           </h2>
 
           {/* Notable Athletes - Clean Grid */}
@@ -79,7 +79,7 @@ export default function AboutPage() {
                   <TwemojiWrapper className="text-lg mb-1 block">
                     {athlete.flag}
                   </TwemojiWrapper>
-                  <p className="text-sm text-white/80 font-heading group-hover:text-brand-red transition-colors">
+                  <p className="text-sm text-white/80 font-heading group-hover:text-brand-primary transition-colors">
                     {athlete.name.toUpperCase()}
                   </p>
                 </div>
@@ -100,26 +100,26 @@ export default function AboutPage() {
 
           <div className="max-w-4xl">
             <h2 className="text-display-lg font-heading text-white mb-12">
-              Master the <span className="text-brand-red">fundamentals</span><br/>
-              Build <span className="text-brand-red">real progress</span>
+              Master the <span className="text-brand-primary">fundamentals</span><br/>
+              Build <span className="text-brand-primary">real progress</span>
             </h2>
 
             <div className="grid md:grid-cols-3 gap-10">
-              <div className="border-l-2 border-brand-red pl-6">
+              <div className="border-l-2 border-brand-primary pl-6">
                 <h3 className="text-h4 font-heading text-white mb-3">Build Strong Foundations</h3>
                 <p className="text-body-sm text-white/60">
                   I believe in getting the basics solid first. Once you have good fundamentals, everything else becomes so much easier and more fun.
                 </p>
               </div>
 
-              <div className="border-l-2 border-brand-red pl-6">
+              <div className="border-l-2 border-brand-primary pl-6">
                 <h3 className="text-h4 font-heading text-white mb-3">Take It Step by Step</h3>
                 <p className="text-body-sm text-white/60">
                   There's no rush! We'll work through tricks together at your pace. I've got 400+ tricks we can explore, but we'll go one step at a time.
                 </p>
               </div>
 
-              <div className="border-l-2 border-brand-red pl-6">
+              <div className="border-l-2 border-brand-primary pl-6">
                 <h3 className="text-h4 font-heading text-white mb-3">Personal Support</h3>
                 <p className="text-body-sm text-white/60">
                   Everyone learns differently, so I'll give you feedback that's tailored to your style and goals. We're in this together!
@@ -137,7 +137,7 @@ export default function AboutPage() {
             <p className="text-white/60 uppercase tracking-widest text-sm mb-8">When I'm not coaching</p>
             
             <h2 className="text-display-lg font-heading text-white mb-8">
-              I love building <span className="text-brand-red">custom skateboards</span>
+              I love building <span className="text-brand-primary">custom skateboards</span>
             </h2>
             
             <p className="text-body-lg text-white/80 mb-8 max-w-2xl mx-auto">
@@ -162,7 +162,7 @@ export default function AboutPage() {
           <p className="text-white/60 uppercase tracking-widest text-sm mb-8">Want to skate together?</p>
 
           <h2 className="text-display font-heading text-white mb-12 max-w-5xl mx-auto">
-            Ready to take your skating <span className="text-brand-red">to the next level</span>?
+            Ready to take your skating <span className="text-brand-primary">to the next level</span>?
           </h2>
 
           <Link href="/download" className="btn-primary text-lg px-16 py-6 inline-block">

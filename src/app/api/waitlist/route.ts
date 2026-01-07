@@ -121,7 +121,7 @@ export async function POST(request: NextRequest) {
         </head>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
           <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h2 style="color: #E84545; border-bottom: 2px solid #E84545; padding-bottom: 10px;">New Waitlist Signup</h2>
+            <h2 style="color: #FC4C02; border-bottom: 2px solid #FC4C02; padding-bottom: 10px;">New Waitlist Signup</h2>
             <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <p><strong>Email:</strong> <a href="mailto:${validatedData.email}">${validatedData.email}</a></p>
               ${validatedData.name ? `<p><strong>Name:</strong> ${validatedData.name}</p>` : ''}
@@ -153,7 +153,7 @@ export async function POST(request: NextRequest) {
         </head>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
           <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h2 style="color: #E84545;">Welcome to The Skate Workshop Waitlist!</h2>
+            <h2 style="color: #FC4C02;">Welcome to The Skate Workshop Waitlist!</h2>
             <p>${validatedData.name ? `Hey ${validatedData.name}` : 'Hey'},</p>
             <p>Thanks for joining The Skate Workshop waitlist!</p>
             <p>We'll notify you as soon as we launch. Get ready to level up your skateboarding with Willy Santos.</p>

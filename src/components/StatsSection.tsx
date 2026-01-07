@@ -38,7 +38,7 @@ export default function StatsSection() {
   ]
 
   return (
-    <section className="py-20 bg-black border-y border-gray-800">
+    <section className="py-20 bg-background border-y border-gray-800">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -71,13 +71,13 @@ export default function StatsSection() {
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mb-4 rounded-xl bg-brand-red/10 border border-brand-red/20 group-hover:bg-brand-red/20 group-hover:border-brand-red/40 transition-all duration-300"
+                  className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mb-4 rounded-xl bg-brand-primary/10 border border-brand-primary/20 group-hover:bg-brand-primary/20 group-hover:border-brand-primary/40 transition-all duration-300"
                 >
-                  <Icon className="w-6 h-6 md:w-8 md:h-8 text-brand-red" />
+                  <Icon className="w-6 h-6 md:w-8 md:h-8 text-brand-primary" />
                 </motion.div>
 
                 {/* Animated Counter */}
-                <div className="text-4xl md:text-5xl lg:text-6xl font-heading text-brand-red mb-2 group-hover:scale-105 transition-transform duration-300">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-heading text-brand-primary mb-2 group-hover:scale-105 transition-transform duration-300">
                   <AnimatedCounter
                     target={stat.value}
                     prefix={stat.prefix}

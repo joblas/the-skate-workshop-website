@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Features | The Skate Workshop',
@@ -15,7 +16,7 @@ export default function FeaturesPage() {
           <p className="text-white/60 uppercase tracking-widest text-sm mb-8">How I can help you</p>
 
           <h1 className="text-display-xl font-heading text-white mb-12 max-w-6xl">
-            Professional tools to <span className="text-brand-red">accelerate your progress</span>
+            Professional tools to <span className="text-brand-primary">accelerate your progress</span>
           </h1>
 
           <p className="text-body-lg text-white/70 max-w-2xl">
@@ -30,7 +31,7 @@ export default function FeaturesPage() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-display font-heading text-white mb-8">
-                Expert <span className="text-brand-red">video analysis</span>
+                Expert <span className="text-brand-primary">video analysis</span>
               </h2>
               <p className="text-body text-white/70 mb-8">
                 Send me your clips and I'll give you helpful, specific feedback to improve your technique. I'll break it down frame by frame, draw on your videos, and send you voice notes with tips that are just for you.
@@ -40,8 +41,14 @@ export default function FeaturesPage() {
               </p>
             </div>
 
-            <div className="relative h-[400px] bg-gray-900/30 rounded-2xl flex items-center justify-center">
-              <span className="text-white/20 text-6xl">🎥</span>
+            <div className="relative h-[500px] rounded-2xl overflow-hidden border border-white/10 group bg-surface">
+              <Image
+                src="/screen/app-annotation-screen.png"
+                alt="The Skate Workshop App - Video Annotation Screen"
+                fill
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
@@ -51,13 +58,19 @@ export default function FeaturesPage() {
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
           <div className="grid md:grid-cols-2 gap-20 items-center">
-            <div className="order-2 md:order-1 relative h-[400px] bg-gray-900/30 rounded-2xl flex items-center justify-center">
-              <span className="text-white/20 text-6xl">📊</span>
+            <div className="order-2 md:order-1 relative h-[500px] rounded-2xl overflow-hidden border border-white/10 group bg-surface">
+              <Image
+                src="/screen/progress-screen.png"
+                alt="The Skate Workshop App - Progress Tracking Screen"
+                fill
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
             </div>
 
             <div className="order-1 md:order-2">
               <h2 className="text-display font-heading text-white mb-8">
-                Track your <span className="text-brand-red">progress</span>
+                Track your <span className="text-brand-primary">progress</span>
               </h2>
               <p className="text-body text-white/70 mb-8">
                 We'll keep track of your progress together! With over 400 tricks to work on, you can log every session and see how much you've improved over time. It's really motivating to look back and see how far you've come.
@@ -76,7 +89,7 @@ export default function FeaturesPage() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-display font-heading text-white mb-8">
-                Challenge <span className="text-brand-red">your friends</span>
+                Challenge <span className="text-brand-primary">your friends</span>
               </h2>
               <p className="text-body text-white/70 mb-8">
                 Play games of SKATE with your friends, share your progress, and cheer each other on! You can challenge your local crew or connect with skaters from around the world. It's all about having fun and supporting each other.
@@ -86,8 +99,14 @@ export default function FeaturesPage() {
               </p>
             </div>
 
-            <div className="relative h-[400px] bg-gray-900/30 rounded-2xl flex items-center justify-center">
-              <span className="text-white/20 text-6xl">⚔️</span>
+            <div className="relative h-[500px] rounded-2xl overflow-hidden border border-white/10 group bg-surface">
+              <Image
+                src="/screen/challenge.png"
+                alt="The Skate Workshop App - Challenge Friends Screen"
+                fill
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
@@ -97,46 +116,46 @@ export default function FeaturesPage() {
       <section className="section-spacing-lg border-b border-white/10">
         <div className="section-container">
           <h2 className="text-h2 font-heading text-white mb-20 text-center">
-            Plus lots of other <span className="text-brand-red">helpful features</span>
+            Plus lots of other <span className="text-brand-primary">helpful features</span>
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="border-l-2 border-brand-red pl-6">
+            <div className="border-l-2 border-brand-primary pl-6">
               <h3 className="text-h4 font-heading text-white mb-3">Chat with Me</h3>
               <p className="text-body-sm text-white/60">
                 Message me directly whenever you have questions or need encouragement. I'm here to help!
               </p>
             </div>
 
-            <div className="border-l-2 border-brand-red pl-6">
+            <div className="border-l-2 border-brand-primary pl-6">
               <h3 className="text-h4 font-heading text-white mb-3">Progress Reports</h3>
               <p className="text-body-sm text-white/60">
                 Share your progress with parents, sponsors, or just keep track of your own growth journey.
               </p>
             </div>
 
-            <div className="border-l-2 border-brand-red pl-6">
+            <div className="border-l-2 border-brand-primary pl-6">
               <h3 className="text-h4 font-heading text-white mb-3">Daily Motivation</h3>
               <p className="text-body-sm text-white/60">
                 Fun challenges and goals to keep you excited about skating every day.
               </p>
             </div>
 
-            <div className="border-l-2 border-brand-red pl-6">
+            <div className="border-l-2 border-brand-primary pl-6">
               <h3 className="text-h4 font-heading text-white mb-3">For Coaches Too</h3>
               <p className="text-body-sm text-white/60">
                 If you coach multiple skaters, you can track all their progress in one place.
               </p>
             </div>
 
-            <div className="border-l-2 border-brand-red pl-6">
+            <div className="border-l-2 border-brand-primary pl-6">
               <h3 className="text-h4 font-heading text-white mb-3">Learning Path</h3>
               <p className="text-body-sm text-white/60">
                 Visual guides to show you what tricks to work on next based on what you already know.
               </p>
             </div>
 
-            <div className="border-l-2 border-brand-red pl-6">
+            <div className="border-l-2 border-brand-primary pl-6">
               <h3 className="text-h4 font-heading text-white mb-3">Works Anywhere</h3>
               <p className="text-body-sm text-white/60">
                 Log your sessions at the park and sync everything when you get home.
@@ -152,7 +171,7 @@ export default function FeaturesPage() {
           <p className="text-white/60 uppercase tracking-widest text-sm mb-8">Excited to get started?</p>
 
           <h2 className="text-display font-heading text-white mb-12 max-w-5xl mx-auto">
-            Ready to <span className="text-brand-red">level up</span>?
+            Ready to <span className="text-brand-primary">level up</span>?
           </h2>
 
           <Link href="/download" className="btn-primary text-lg px-16 py-6 inline-block">

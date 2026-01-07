@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Check, Loader2, Mail, User, FileText, MessageSquare, Tag } from 'lucide-react'
+import { Check, Loader2, Mail, User, FileText, MessageSquare, Tag, Briefcase, Wrench } from 'lucide-react'
 import confetti from 'canvas-confetti'
 
 // Validation schema
@@ -42,7 +42,7 @@ export default function ContactPage() {
     const count = 100
     const defaults = {
       origin: { y: 0.7 },
-      colors: ['#E84545', '#FF5555', '#FFFFFF'],
+      colors: ['#FC4C02', '#FF6B35', '#FFFFFF'],
     }
 
     function fire(particleRatio: number, opts: any) {
@@ -107,29 +107,35 @@ export default function ContactPage() {
       <section className="py-20">
         <div className="section-container">
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
-            <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-8 text-center">
-              <div className="text-4xl mb-4">📧</div>
+            <div className="bg-surface/50 border border-white/10 rounded-xl p-8 text-center group hover:border-brand-primary/50 transition-all">
+              <div className="w-12 h-12 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Mail className="w-6 h-6 text-brand-primary" />
+              </div>
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-400 mb-4">General inquiries</p>
-              <a href="mailto:contact@theskateworkshop.app" className="text-brand-red hover:text-brand-red-light">
+              <a href="mailto:contact@theskateworkshop.app" className="text-brand-primary hover:underline">
                 contact@theskateworkshop.app
               </a>
             </div>
 
-            <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-8 text-center">
-              <div className="text-4xl mb-4">💼</div>
+            <div className="bg-surface/50 border border-white/10 rounded-xl p-8 text-center group hover:border-brand-primary/50 transition-all">
+              <div className="w-12 h-12 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Briefcase className="w-6 h-6 text-brand-primary" />
+              </div>
               <h3 className="text-xl font-bold text-white mb-2">Team Inquiries</h3>
               <p className="text-gray-400 mb-4">Federations & teams</p>
-              <a href="mailto:teams@theskateworkshop.app" className="text-brand-red hover:text-brand-red-light">
+              <a href="mailto:teams@theskateworkshop.app" className="text-brand-primary hover:underline">
                 teams@theskateworkshop.app
               </a>
             </div>
 
-            <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-8 text-center">
-              <div className="text-4xl mb-4">🛠️</div>
+            <div className="bg-surface/50 border border-white/10 rounded-xl p-8 text-center group hover:border-brand-primary/50 transition-all">
+              <div className="w-12 h-12 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Wrench className="w-6 h-6 text-brand-primary" />
+              </div>
               <h3 className="text-xl font-bold text-white mb-2">Support</h3>
               <p className="text-gray-400 mb-4">Technical help</p>
-              <a href="mailto:support@theskateworkshop.app" className="text-brand-red hover:text-brand-red-light">
+              <a href="mailto:support@theskateworkshop.app" className="text-brand-primary hover:underline">
                 support@theskateworkshop.app
               </a>
             </div>
@@ -145,10 +151,12 @@ export default function ContactPage() {
                 // Success State
                 <motion.div
                   key="success"
+                  role="status"
+                  aria-live="polite"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  className="bg-gradient-to-br from-brand-red to-brand-red-dark rounded-2xl p-8 md:p-12 text-center"
+                  className="bg-gradient-to-br from-brand-primary to-brand-primary/80 rounded-2xl p-8 md:p-12 text-center"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
@@ -156,7 +164,7 @@ export default function ContactPage() {
                     transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
                     className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6"
                   >
-                    <Check className="w-12 h-12 text-brand-red" />
+                    <Check className="w-12 h-12 text-brand-primary" />
                   </motion.div>
                   <h3 className="text-3xl font-heading text-white mb-4">
                     Message Sent! 🎉
@@ -168,7 +176,7 @@ export default function ContactPage() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setIsSuccess(false)}
-                    className="bg-white text-brand-red font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="bg-white text-brand-primary font-bold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors"
                   >
                     Send Another Message
                   </motion.button>
@@ -203,8 +211,8 @@ export default function ContactPage() {
                             className={`w-full pl-12 pr-4 py-4 bg-black/40 border rounded-lg text-white placeholder-gray-500
                               transition-all duration-200 focus:outline-none focus:ring-2
                               ${errors.name
-                                ? 'border-red-500 focus:ring-red-500/50'
-                                : 'border-gray-700 focus:ring-brand-red focus:border-brand-red'
+                                ? 'border-error focus:ring-error/50'
+                                : 'border-white/10 focus:ring-brand-primary focus:border-brand-primary'
                               }`}
                           />
                         </div>
@@ -214,7 +222,7 @@ export default function ContactPage() {
                               initial={{ opacity: 0, y: -10 }}
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: -10 }}
-                              className="text-red-400 text-sm mt-2"
+                              className="text-error text-sm mt-2"
                             >
                               {errors.name.message}
                             </motion.p>
@@ -239,8 +247,8 @@ export default function ContactPage() {
                             className={`w-full pl-12 pr-4 py-4 bg-black/40 border rounded-lg text-white placeholder-gray-500
                               transition-all duration-200 focus:outline-none focus:ring-2
                               ${errors.email
-                                ? 'border-red-500 focus:ring-red-500/50'
-                                : 'border-gray-700 focus:ring-brand-red focus:border-brand-red'
+                                ? 'border-error focus:ring-error/50'
+                                : 'border-white/10 focus:ring-brand-primary focus:border-brand-primary'
                               }`}
                           />
                         </div>
@@ -250,7 +258,7 @@ export default function ContactPage() {
                               initial={{ opacity: 0, y: -10 }}
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: -10 }}
-                              className="text-red-400 text-sm mt-2"
+                              className="text-error text-sm mt-2"
                             >
                               {errors.email.message}
                             </motion.p>
@@ -274,8 +282,8 @@ export default function ContactPage() {
                           className={`w-full pl-12 pr-4 py-4 bg-black/40 border rounded-lg text-white
                             transition-all duration-200 focus:outline-none focus:ring-2
                             ${errors.inquiryType
-                              ? 'border-red-500 focus:ring-red-500/50'
-                              : 'border-gray-700 focus:ring-brand-red focus:border-brand-red'
+                              ? 'border-error focus:ring-error/50'
+                              : 'border-white/10 focus:ring-brand-primary focus:border-brand-primary'
                             }`}
                         >
                           <option value="general">General Question</option>
@@ -292,7 +300,7 @@ export default function ContactPage() {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
-                            className="text-red-400 text-sm mt-2"
+                            className="text-error text-sm mt-2"
                           >
                             {errors.inquiryType.message}
                           </motion.p>
@@ -317,8 +325,8 @@ export default function ContactPage() {
                           className={`w-full pl-12 pr-4 py-4 bg-black/40 border rounded-lg text-white placeholder-gray-500
                             transition-all duration-200 focus:outline-none focus:ring-2
                             ${errors.subject
-                              ? 'border-red-500 focus:ring-red-500/50'
-                              : 'border-gray-700 focus:ring-brand-red focus:border-brand-red'
+                              ? 'border-error focus:ring-error/50'
+                              : 'border-white/10 focus:ring-brand-primary focus:border-brand-primary'
                             }`}
                         />
                       </div>
@@ -328,7 +336,7 @@ export default function ContactPage() {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
-                            className="text-red-400 text-sm mt-2"
+                            className="text-error text-sm mt-2"
                           >
                             {errors.subject.message}
                           </motion.p>
@@ -353,8 +361,8 @@ export default function ContactPage() {
                           className={`w-full pl-12 pr-4 py-4 bg-black/40 border rounded-lg text-white placeholder-gray-500
                             transition-all duration-200 focus:outline-none focus:ring-2 resize-none
                             ${errors.message
-                              ? 'border-red-500 focus:ring-red-500/50'
-                              : 'border-gray-700 focus:ring-brand-red focus:border-brand-red'
+                              ? 'border-error focus:ring-error/50'
+                              : 'border-white/10 focus:ring-brand-primary focus:border-brand-primary'
                             }`}
                         />
                       </div>
@@ -364,7 +372,7 @@ export default function ContactPage() {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
-                            className="text-red-400 text-sm mt-2"
+                            className="text-error text-sm mt-2"
                           >
                             {errors.message.message}
                           </motion.p>
@@ -379,7 +387,8 @@ export default function ContactPage() {
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
-                          className="bg-red-500/10 border border-red-500/30 rounded-lg p-4 text-red-400 text-sm"
+                          role="alert"
+                          className="bg-error/10 border border-error/30 rounded-lg p-4 text-error text-sm"
                         >
                           {errorMessage}
                         </motion.div>
@@ -396,7 +405,7 @@ export default function ContactPage() {
                         flex items-center justify-center gap-2
                         ${isSubmitting || !isValid
                           ? 'bg-gray-700 text-gray-400 cursor-not-allowed'
-                          : 'bg-brand-red hover:bg-brand-red-dark text-white shadow-lg hover:shadow-glow'
+                          : 'bg-brand-primary hover:bg-brand-primary/90 text-white shadow-lg hover:shadow-glow'
                         }`}
                     >
                       {isSubmitting ? (

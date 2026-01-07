@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { Wrench, Target, MapPin, Utensils, Flag } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-gray-800">
+    <footer className="bg-background border-t border-gray-800">
       <div className="section-container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -11,7 +12,7 @@ export default function Footer() {
             <div className="flex items-center space-x-4 mb-6">
               <div className="relative w-14 h-14 flex items-center justify-center">
                 <Image
-                  src="/images/logo/icon.png"
+                  src="/images/logo/tsw-logo.png?v=2"
                   alt="The Skate Workshop App Logo"
                   width={56}
                   height={56}
@@ -29,11 +30,11 @@ export default function Footer() {
                   WebkitFontSmoothing: 'antialiased',
                   MozOsxFontSmoothing: 'grayscale',
                   textRendering: 'optimizeLegibility'
-                }}>The Skate Workshop App</span>
+                }}>THE SKATE WORKSHOP</span>
                 <span className="text-sm text-white/60 font-body antialiased" style={{
                   WebkitFontSmoothing: 'antialiased',
                   MozOsxFontSmoothing: 'grayscale'
-                }}>Mobile Training App</span>
+                }}>Expert Mobile Training</span>
               </div>
             </div>
             <p className="text-gray-400 text-sm font-body">
@@ -126,46 +127,46 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="mb-6">
             <h3 className="text-white font-semibold mb-4 text-center">Follow Willy's Ecosystem</h3>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-6">
               <a
                 href="https://www.instagram.com/willysworkshop/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-brand-red transition-colors text-sm"
+                className="text-gray-400 hover:text-brand-primary transition-colors text-sm flex items-center gap-2"
               >
-                🛠️ Willy's Workshop
+                <Wrench size={16} /> Willy's Workshop
               </a>
               <a
                 href="https://www.instagram.com/skate_warz/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-brand-red transition-colors text-sm"
+                className="text-gray-400 hover:text-brand-primary transition-colors text-sm flex items-center gap-2"
               >
-                ⚔️ Skate Warz
+                <Target size={16} /> Skate Warz
               </a>
               <a
                 href="https://www.instagram.com/couchcurbs/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-brand-red transition-colors text-sm"
+                className="text-gray-400 hover:text-brand-primary transition-colors text-sm flex items-center gap-2"
               >
-                🏙️ Couch Curbs
+                <MapPin size={16} /> Couch Curbs
               </a>
               <a
                 href="https://www.instagram.com/kaintayoday/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-brand-red transition-colors text-sm"
+                className="text-gray-400 hover:text-brand-primary transition-colors text-sm flex items-center gap-2"
               >
-                🍽️ Kain Tayo Day
+                <Utensils size={16} /> Kain Tayo Day
               </a>
               <a
                 href="https://www.instagram.com/commission_skateboard_france/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-brand-red transition-colors text-sm"
+                className="text-gray-400 hover:text-brand-primary transition-colors text-sm flex items-center gap-2"
               >
-                🇫🇷 Commission Skateboard France
+                <Flag size={16} /> Commission Skateboard France
               </a>
             </div>
           </div>

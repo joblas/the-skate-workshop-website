@@ -70,7 +70,7 @@ Submitted: ${new Date().toLocaleString()}`,
         </head>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
           <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h2 style="color: #E84545; border-bottom: 2px solid #E84545; padding-bottom: 10px;">New Coach Application</h2>
+            <h2 style="color: #FC4C02; border-bottom: 2px solid #FC4C02; padding-bottom: 10px;">New Coach Application</h2>
             <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <p><strong>Full Name:</strong> ${validatedData.fullName}</p>
               <p><strong>Email:</strong> <a href="mailto:${validatedData.email}">${validatedData.email}</a></p>
@@ -79,7 +79,7 @@ Submitted: ${new Date().toLocaleString()}`,
             </div>
             <div style="margin: 20px 0;">
               <p><strong>Why they want to join:</strong></p>
-              <p style="background: #fff; padding: 15px; border-left: 4px solid #E84545;">${validatedData.message.replace(/\n/g, '<br>')}</p>
+              <p style="background: #fff; padding: 15px; border-left: 4px solid #FC4C02;">${validatedData.message.replace(/\n/g, '<br>')}</p>
             </div>
             <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
             <p style="color: #666; font-size: 12px;">Submitted: ${new Date().toLocaleString()}</p>
@@ -118,11 +118,11 @@ Looking forward to potentially working with you!
         </head>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
           <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h2 style="color: #E84545;">Application Received!</h2>
+            <h2 style="color: #FC4C02;">Application Received!</h2>
             <p>Hey ${validatedData.fullName},</p>
             <p>Thanks for your interest in joining The Skate Workshop coaching network!</p>
             <p>We've received your application and will review it carefully. We'll get back to you within 3-5 business days.</p>
-            <p>In the meantime, feel free to explore our platform at <a href="https://theskateworkshop.app" style="color: #E84545;">theskateworkshop.app</a> to see what we're building together.</p>
+            <p>In the meantime, feel free to explore our platform at <a href="https://theskateworkshop.app" style="color: #FC4C02;">theskateworkshop.app</a> to see what we're building together.</p>
             <p>Looking forward to potentially working with you!</p>
             <p style="margin-top: 30px;">- The Skate Workshop Team</p>
           </div>

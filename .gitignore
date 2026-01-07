@@ -42,6 +42,9 @@ next-env.d.ts
 .bmad-core/
 .windsurf/
 .claude/
+.tmp/
+credentials.json
+token.json
 
 # Waitlist data (contains user emails)
 /data/

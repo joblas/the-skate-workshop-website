@@ -18,7 +18,7 @@ export default function DownloadPage() {
 
           {/* MASSIVE Headline */}
           <h1 className="text-display-xl font-heading text-white mb-12 text-center">
-            JOIN THE <span className="text-brand-red">WAITLIST</span>
+            JOIN THE <span className="text-brand-primary">WAITLIST</span>
           </h1>
 
           {/* Minimal Description */}

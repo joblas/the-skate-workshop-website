@@ -1,8 +1,15 @@
 import type { Metadata } from 'next'
+import { Spline_Sans } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { Analytics } from '@vercel/analytics/next'
+
+const splineSans = Spline_Sans({
+  subsets: ['latin'],
+  variable: '--font-spline',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://theskateworkshop.app'),
@@ -55,7 +62,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#000000" />
       </head>
-      <body className="overflow-x-hidden">
+      <body className={`${splineSans.variable} ${splineSans.className} overflow-x-hidden antialiased bg-background text-white`}>
         <Navigation />
         <main id="main-content" className="relative">
           {children}
