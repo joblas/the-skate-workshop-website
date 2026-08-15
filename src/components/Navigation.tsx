@@ -14,6 +14,7 @@ export default function Navigation() {
     { href: '/', label: 'HOME' },
     { href: '/about', label: 'ABOUT' },
     { href: '/features', label: 'FEATURES' },
+    { href: '/pricing', label: 'PRICING' },
     { href: '/coaches', label: 'COACHES' },
     { href: 'https://willysworkshop.com/', label: 'SHOP', external: true },
   ]

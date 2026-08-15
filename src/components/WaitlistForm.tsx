@@ -264,6 +264,13 @@ export default function WaitlistForm({ variant = 'embedded' }: WaitlistFormProps
                 )}
               </motion.button>
 
+              {/* Why-disabled hint: user testing read the grey button as broken */}
+              {!isValid && !isSubmitting && (
+                <p className="text-gray-500 text-sm text-center" aria-live="polite">
+                  Enter your email above to join the list
+                </p>
+              )}
+
               {/* Trust Indicators */}
               <div className="flex items-center justify-center gap-6 text-gray-500 text-sm pt-4">
                 <div className="flex items-center gap-2">
