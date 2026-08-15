@@ -111,7 +111,7 @@ export default function HomePage() {
           </h2>
 
           <Link href="/download" className="btn-primary text-lg px-16 py-6 inline-block">
-            Join the Community
+            Get the App
           </Link>
         </div>
       </section>

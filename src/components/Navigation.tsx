@@ -88,7 +88,7 @@ export default function Navigation() {
                 href="/download"
                 className="relative inline-flex items-center px-6 py-2.5 bg-brand-primary hover:bg-brand-primary/90 text-white font-bold text-sm tracking-wider uppercase rounded-full transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:shadow-brand-primary/20 group overflow-hidden antialiased"
               >
-                <span className="relative z-10">JOIN WAITLIST</span>
+                <span className="relative z-10">GET THE APP</span>
                 {/* Animated background overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
               </Link>
@@ -139,7 +139,7 @@ export default function Navigation() {
               className="relative inline-flex items-center justify-center px-8 py-3 bg-brand-primary hover:bg-brand-primary/90 text-white font-bold text-sm tracking-wider uppercase rounded-full transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:shadow-brand-primary/20 group overflow-hidden antialiased mt-4"
               onClick={() => setIsMenuOpen(false)}
             >
-              <span className="relative z-10">JOIN WAITLIST</span>
+              <span className="relative z-10">GET THE APP</span>
               {/* Animated background overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
             </Link>
