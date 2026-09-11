@@ -32,9 +32,9 @@ jobs:
             echo "kind=production" >> "$GITHUB_OUTPUT"
           fi
       - name: Install
-        run: npm ci
+        run: npm ci --legacy-peer-deps
       - name: Build (next-on-pages pinned)
-        run: npx @cloudflare/next-on-pages@1.13.16
+        run: npx --no-install @cloudflare/next-on-pages
       - name: Edge adapter sanity check
         run: |
           CFG=$(find .vercel/output/functions -name '.vc-config.json' | wc -l)
