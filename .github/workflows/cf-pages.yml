@@ -38,9 +38,8 @@ jobs:
         run: npm ci --legacy-peer-deps
       - name: CI gate = build only (deploy stays manual wrangler direct-upload)
         run: |
-          echo "Skate API routes use fs+nodemailer (Node-only); next-on-pages requires edge exports."
-          echo "Deploy remains manual until routes migrate to edge-safe stack (Resend/KV)."
-          test -d .next && echo "next build output verified"
+          npm run build
+          test -d .next && echo "next build output verified" 
 
       - name: Comment preview URL
         if: steps.tgt.outputs.kind == 'preview'
