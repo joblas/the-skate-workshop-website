@@ -1,0 +1,57 @@
+name: cf-pages
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: cf-pages-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    env:
+      npm_config_legacy_peer_deps: 'true'
+      npm_config_strict_peer_dependencies: 'false'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Deploy target
+        id: tgt
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            echo "branch=${{ github.head_ref }}" >> "$GITHUB_OUTPUT"
+            echo "kind=preview" >> "$GITHUB_OUTPUT"
+          else
+            echo "branch=main" >> "$GITHUB_OUTPUT"
+            echo "kind=production" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Install
+        run: npm ci --legacy-peer-deps
+      - name: CI gate = build only (deploy stays manual wrangler direct-upload)
+        run: |
+          npm run build
+          test -d .next && echo "next build output verified" 
+
+      - name: Comment preview URL
+        if: steps.tgt.outputs.kind == 'preview'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = process.env.DEPLOY_URL || '(url unavailable — check Actions log)';
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🚀 CF Pages preview: ' + url
+            })
+        env:
+          DEPLOY_URL: ${{ steps.deploy.outputs.url }}
