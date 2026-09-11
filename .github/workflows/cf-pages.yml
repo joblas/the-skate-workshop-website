@@ -16,6 +16,9 @@ permissions:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    env:
+      npm_config_legacy_peer_deps: 'true'
+      npm_config_strict_peer_dependencies: 'false'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
