@@ -1,8 +1,13 @@
 import { Metadata } from 'next'
 
+// Written from what the app actually does — supabase/schema-baseline.sql
+// in the-skate-workshop-v3 and its app/(auth), app/(athlete), app/(coach)
+// route groups. No Stripe integration exists in that codebase: this page
+// does not claim payment data is collected, because none is.
+
 export const metadata: Metadata = {
   title: 'Privacy Policy | The Skate Workshop',
-  description: 'Privacy Policy for The Skate Workshop. Learn how we collect, use, and protect your personal information.',
+  description: 'Privacy Policy for The Skate Workshop app and website.',
 }
 
 export default function PrivacyPage() {
@@ -13,7 +18,7 @@ export default function PrivacyPage() {
           <div className="max-w-4xl mx-auto">
             <h1 className="heading-xl mb-6">Privacy Policy</h1>
             <p className="text-xl text-gray-400">
-              Last Updated: October 16, 2025
+              Last Updated: September 17, 2026
             </p>
           </div>
         </div>
@@ -26,150 +31,113 @@ export default function PrivacyPage() {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Introduction</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  The Skate Workshop ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and website (collectively, the "Service"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the Service.
+                  The Skate Workshop is built and operated by Joe's Tech Solutions LLC ("we," "our," or "us"). This Privacy Policy explains what the app and this website collect, why, and how you can have it deleted. It's written from what the app's code actually does — if you find it describing something the app doesn't do, tell us and we'll fix it.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Information We Collect</h2>
-                
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Personal Information</h3>
+
+                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Account information</h3>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  We may collect personal information that you voluntarily provide to us when you:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4">
-                  <li>Register for an account</li>
-                  <li>Make a purchase or booking</li>
-                  <li>Upload videos or content</li>
-                  <li>Contact us for support</li>
-                  <li>Subscribe to our newsletter</li>
-                  <li>Apply to join our coach network</li>
-                </ul>
-                <p className="text-gray-400 leading-relaxed mt-4">
-                  This information may include: name, email address, phone number, payment information, profile photo, and any other information you choose to provide.
+                  Creating an account requires an email address, handled by our authentication provider (Supabase Auth). You choose a display name and a role — athlete or coach. Coaches are identified in the app by a coach code; athletes optionally enter one to link to a specific coach.
                 </p>
 
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Usage Data</h3>
+                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Training content and messages</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  We automatically collect certain information when you use the Service, including:
+                  When you upload a video or photo for coaching review, or send a text or voice message to your matched coach or athlete, we store it to deliver that feature. You retain ownership of everything you upload or send.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4">
-                  <li>Device information (type, operating system, unique device identifiers)</li>
-                  <li>Log data (IP address, browser type, pages visited, time spent)</li>
-                  <li>Usage statistics (features used, session duration, performance data)</li>
-                  <li>Location data (with your permission)</li>
-                </ul>
 
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Video Content</h3>
+                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Crash and bug reports</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  When you upload videos to our Service, we store and process this content to provide coaching features, analytics, and social sharing capabilities. You retain all rights to your video content.
+                  The app uses Sentry to capture crash reports and errors so we can fix bugs, and has an in-app feedback tool for reporting problems directly. Both can include device information and the app state at the time of the error.
+                </p>
+
+                <h3 className="text-2xl font-bold text-white mb-3 mt-6">What we do not collect</h3>
+                <p className="text-gray-400 leading-relaxed">
+                  We do not process payments or collect payment information anywhere in the app — there is no billing system built into it. We do not run advertising and do not sell or share your information with advertisers.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">How We Use Your Information</h2>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  We use the information we collect to:
+                  We use it to:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4">
-                  <li>Provide, maintain, and improve the Service</li>
-                  <li>Process transactions and send related information</li>
-                  <li>Send administrative and promotional communications</li>
-                  <li>Respond to your comments and questions</li>
-                  <li>Monitor and analyze usage and trends</li>
-                  <li>Detect, prevent, and address technical issues and fraud</li>
-                  <li>Personalize your experience and deliver relevant content</li>
-                  <li>Facilitate coach-athlete connections</li>
+                  <li>Run your account and connect athletes with the coach they've chosen</li>
+                  <li>Store and deliver the training videos and messages you send within a coach–athlete pairing</li>
+                  <li>Diagnose and fix bugs and crashes</li>
+                  <li>Respond when you contact support</li>
                 </ul>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Information Sharing and Disclosure</h2>
-                <p className="text-gray-400 leading-relaxed mb-4">
-                  We may share your information in the following circumstances:
-                </p>
-                
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">With Coaches</h3>
+                <h2 className="text-3xl font-bold text-white mb-4">Who Sees Your Information</h2>
+
+                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Your matched coach or athlete</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  When you book coaching sessions, we share necessary information with your coach to facilitate the service, including your name, skill level, and training videos.
+                  Training videos, messages, and progress data are visible to the coach or athlete you're paired with — that pairing is the core of the app. They are not visible to other coaches or athletes on the platform.
                 </p>
 
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Service Providers</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  We may share your information with third-party service providers who perform services on our behalf, including:
+                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Service providers</h3>
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  We use third parties to run the app, and they process data on our behalf, not for their own purposes:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4">
-                  <li>Payment processing (Stripe)</li>
-                  <li>Cloud storage (Supabase)</li>
-                  <li>Analytics providers</li>
-                  <li>Email service providers</li>
+                  <li>Supabase — database, file storage, and authentication</li>
+                  <li>Sentry — crash and error reporting</li>
+                  <li>Expo / EAS — app builds, over-the-air updates, and push notifications</li>
                 </ul>
 
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Legal Requirements</h3>
+                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Legal requirements</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  We may disclose your information if required to do so by law or in response to valid requests by public authorities.
-                </p>
-
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Business Transfers</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  If we are involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.
+                  We may disclose information if required by law or a valid request from a public authority.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Data Security</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  We implement appropriate technical and organizational security measures to protect your personal information. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+                  Data is stored in Supabase with row-level security scoping each user's access to their own account and coach–athlete pairing. No method of transmission or storage is 100% secure, and we can't guarantee absolute security.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Your Privacy Rights</h2>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  Depending on your location, you may have the following rights:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4">
-                  <li><strong className="text-white">Access:</strong> Request a copy of the personal information we hold about you</li>
-                  <li><strong className="text-white">Correction:</strong> Request correction of inaccurate information</li>
-                  <li><strong className="text-white">Deletion:</strong> Request deletion of your personal information</li>
-                  <li><strong className="text-white">Data Portability:</strong> Request transfer of your data to another service</li>
-                  <li><strong className="text-white">Opt-Out:</strong> Unsubscribe from marketing communications</li>
-                </ul>
-                <p className="text-gray-400 leading-relaxed mt-4">
-                  To exercise these rights, please contact us at privacy@skateworkshop.com.
+                  Email <a href="mailto:privacy@theskateworkshop.app" className="text-brand-primary hover:underline">privacy@theskateworkshop.app</a> to ask what we hold about you, request a copy, ask for a correction, or ask for deletion. If you're in California, the UK, or the EU, these are rights you have in law; we'll do it either way.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Children's Privacy</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  Our Service is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.
+                  Many athletes on this platform are minors, using the app through a coach they already train with. We do not knowingly collect personal information from a child under 13 without a parent or guardian's consent. If you're a parent or guardian and believe your child under 13 has an account without your consent, email <a href="mailto:privacy@theskateworkshop.app" className="text-brand-primary hover:underline">privacy@theskateworkshop.app</a> and we will delete it. The app does not currently verify age at signup, so a parent or guardian who sets up or allows a minor's account is responsible for that decision, consistent with our <a href="/terms" className="text-brand-primary hover:underline">Terms of Service</a>.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">International Data Transfers</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">Data Retention</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that are different from the laws of your country. We take steps to ensure that your information receives an adequate level of protection.
+                  We keep your account data while your account is active. If you ask us to delete your account, we remove your personal information and content within a reasonable time, except where we're required to keep something by law.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Changes to This Privacy Policy</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.
+                  If what we collect changes, this page changes with it, and the "Last Updated" date changes too.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Contact Us</h2>
-                <p className="text-gray-400 leading-relaxed mb-4">
-                  If you have questions about this Privacy Policy, please contact us:
-                </p>
                 <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
                   <p className="text-white mb-2">The Skate Workshop</p>
-                  <p className="text-gray-400">Email: privacy@skateworkshop.com</p>
-                  <p className="text-gray-400">General Inquiries: contact@skateworkshop.com</p>
+                  <p className="text-gray-400">Operated by: Joe's Tech Solutions LLC</p>
+                  <p className="text-gray-400 mt-2">Privacy: <a href="mailto:privacy@theskateworkshop.app" className="text-brand-primary hover:underline">privacy@theskateworkshop.app</a></p>
+                  <p className="text-gray-400">Support: <a href="mailto:support@theskateworkshop.app" className="text-brand-primary hover:underline">support@theskateworkshop.app</a></p>
                 </div>
               </div>
             </div>
