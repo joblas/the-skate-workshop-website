@@ -1,13 +1,16 @@
+import Link from 'next/link'
 import { Metadata } from 'next'
 
-// Written from what the app actually does, not from a template — see
-// the-skate-workshop-v3's supabase/schema-baseline.sql and app/(auth),
-// app/(athlete), app/(coach) route groups. The Service is currently a
-// free beta (TestFlight / direct APK): there is no Stripe integration
-// and no coach revenue-share arrangement anywhere in that codebase, so
-// this page does not describe pricing tiers or a revenue split that
-// don't exist. If a paid plan or a real revenue-share ships, this page
-// changes with it, before it goes live, not after.
+// Written from what the app actually does. Ground truth is
+// the-skate-workshop-v3's src/types/database.ts (the generated types the
+// client compiles against) and supabase/applied/README.md — NOT
+// supabase/schema-baseline.sql, which is an August 2 dump that predates
+// the crew-feed feature (shipped August 9) and is missing message types
+// added since. The Service has no Stripe integration and no in-app
+// revenue-share arrangement in that codebase, so this page does not
+// describe pricing tiers or a platform-processed split that don't exist.
+// If a paid plan or an in-app revenue-share ships, this page changes with
+// it, before it goes live, not after.
 
 export const metadata: Metadata = {
   title: 'Terms of Service | The Skate Workshop',
@@ -76,24 +79,30 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Your content</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  You keep ownership of the videos, photos, and messages you upload or send ("Your Content"). By uploading it, you give us a license to store, process, and show it back to the coach or athlete you're paired with, solely to run the Service — nothing broader than that, and nothing public unless you separately choose to share it elsewhere.
+                  You keep ownership of the videos, photos, and messages you upload or send ("Your Content"). By uploading it, you give us a license to store, process, and show it back to the coach or athlete you're paired with, solely to run the Service — nothing broader than that.
                 </p>
                 <p className="text-gray-400 leading-relaxed mt-4">
-                  Don't upload or send content that's illegal, that harasses or endangers anyone, that includes someone else's personal information without their consent, or that infringes someone else's rights. We can remove content or suspend an account that violates this.
+                  A clip or milestone you mark as shared with your crew is also shown to the other athletes who train with your coach — that's the only broader visibility that exists, it only happens if you choose it, and you or your coach can unshare it at any time. Nothing is ever made public outside the app unless you separately choose to share it elsewhere yourself.
+                </p>
+                <p className="text-gray-400 leading-relaxed mt-4">
+                  Don't upload or send content that's illegal, that harasses or endangers anyone, that includes someone else's personal information without their consent, or that infringes someone else's rights — including sharing someone else's clip to your crew without their OK. We can remove content or suspend an account that violates this.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Coach–athlete messaging</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  Coaches and their athletes can message each other and review training clips directly in the app. Keep it to coaching. If a message or a coach makes you uncomfortable, or you believe someone is misusing the messaging feature, email <a href="mailto:support@theskateworkshop.app" className="text-brand-primary hover:underline">support@theskateworkshop.app</a> and we will look into it.
+                  Coaches and their athletes can message each other and review training clips directly in the app. Messages are never shown to your crew or to anyone but the coach and athlete in that conversation. Keep it to coaching. If a message or a coach makes you uncomfortable, or you believe someone is misusing the messaging or crew-sharing features, email <a href="mailto:support@theskateworkshop.app" className="text-brand-primary hover:underline">support@theskateworkshop.app</a> and we will look into it.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Pricing</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">Pricing and coach compensation</h2>
                 <p className="text-gray-400 leading-relaxed">
                   The Service is currently free during the beta period. We are not currently charging for any tier, subscription, or coaching session through the app. If that changes, we'll tell you the price and give you a clear chance to accept or decline before you're ever charged — not a retroactive bill for something you already assumed was free.
+                </p>
+                <p className="text-gray-400 leading-relaxed mt-4">
+                  If a coach is compensated for coaching arranged around the app, that arrangement is between the coach and whoever pays them — the Service does not process payments, collect a platform fee, or guarantee any specific split. We are not a party to that arrangement.
                 </p>
               </div>
 
@@ -116,7 +125,7 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Intellectual Property</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  The Service and its content, excluding Your Content, are owned by Joe's Tech Solutions LLC and protected by applicable intellectual property law. You may not copy, modify, distribute, or resell any part of the Service without our prior written consent.
+                  The Service and its content, excluding Your Content, are owned by Joe's Tech Solutions LLC and protected by applicable intellectual property law — except for Willy Santos's own name, likeness, and brand assets, which are used under license and remain his. You may not copy, modify, distribute, or resell any part of the Service without our prior written consent.
                 </p>
               </div>
 
