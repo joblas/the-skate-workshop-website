@@ -1,8 +1,20 @@
+import Link from 'next/link'
 import { Metadata } from 'next'
+
+// Written from what the app actually does. Ground truth is
+// the-skate-workshop-v3's src/types/database.ts (the generated types the
+// client compiles against) and supabase/applied/README.md — NOT
+// supabase/schema-baseline.sql, which is an August 2 dump that predates
+// the crew-feed feature (shipped August 9) and is missing message types
+// added since. The Service has no Stripe integration and no in-app
+// revenue-share arrangement in that codebase, so this page does not
+// describe pricing tiers or a platform-processed split that don't exist.
+// If a paid plan or an in-app revenue-share ships, this page changes with
+// it, before it goes live, not after.
 
 export const metadata: Metadata = {
   title: 'Terms of Service | The Skate Workshop',
-  description: 'Terms of Service for The Skate Workshop. Read our terms and conditions for using our platform.',
+  description: 'Terms of Service for The Skate Workshop app and website.',
 }
 
 export default function TermsPage() {
@@ -13,7 +25,7 @@ export default function TermsPage() {
           <div className="max-w-4xl mx-auto">
             <h1 className="heading-xl mb-6">Terms of Service</h1>
             <p className="text-xl text-gray-400">
-              Last Updated: October 16, 2025
+              Last Updated: September 17, 2026
             </p>
           </div>
         </div>
@@ -26,203 +38,146 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Agreement to Terms</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  These Terms of Service ("Terms") constitute a legally binding agreement between you and The Skate Workshop, operated by Joe's Tech Solutions LLC ("Company," "we," "us," or "our"), concerning your access to and use of the The Skate Workshop mobile application and website (collectively, the "Service").
+                  These Terms of Service ("Terms") are a legally binding agreement between you and Joe's Tech Solutions LLC ("Company," "we," "us," or "our"), which builds and operates The Skate Workshop mobile app and this website (together, the "Service").
                 </p>
                 <p className="text-gray-400 leading-relaxed mt-4">
-                  By accessing or using the Service, you agree to be bound by these Terms. If you do not agree to these Terms, you may not access or use the Service.
+                  By creating an account or using the Service, you agree to these Terms. If you do not agree, do not use the Service.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">User Accounts</h2>
-                
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Account Creation</h3>
+                <h2 className="text-3xl font-bold text-white mb-4">Beta status</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  To use certain features of the Service, you must create an account. You agree to:
+                  The app is currently in beta, distributed through TestFlight and direct Android installs, not the public app stores. Beta software can have bugs, can lose data, and can change without notice. Use it accordingly, and tell us when something breaks — that's what the beta is for.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-4">Accounts and roles</h2>
+                <p className="text-gray-400 leading-relaxed">
+                  Using the app requires an account, created with an email address through our authentication provider. When you set up your account you choose a role:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4">
-                  <li>Provide accurate, current, and complete information</li>
-                  <li>Maintain and update your information to keep it accurate</li>
-                  <li>Maintain the security of your account credentials</li>
-                  <li>Accept responsibility for all activities under your account</li>
-                  <li>Notify us immediately of any unauthorized access</li>
+                  <li><strong className="text-white">Athlete</strong> — optionally paired with a coach.</li>
+                  <li><strong className="text-white">Coach</strong> — identified by a coach code you distribute to your own athletes.</li>
                 </ul>
-
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Account Termination</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  We reserve the right to suspend or terminate your account if you violate these Terms or engage in conduct that we determine, in our sole discretion, is harmful to the Service or other users.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Subscription Plans and Payment</h2>
-                
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Subscription Tiers</h3>
-                <p className="text-gray-400 leading-relaxed mb-4">
-                  We offer multiple subscription tiers:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4">
-                  <li>Basic Training: $9.99/month</li>
-                  <li>Pro Coaching: $19.99/month</li>
-                  <li>Elite 1-on-1 Access: $49.99/month</li>
-                </ul>
-
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Billing</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Subscription fees are billed in advance on a monthly basis. You authorize us to charge your payment method on a recurring basis. All fees are non-refundable except as required by law or as expressly stated in these Terms.
-                </p>
-
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Cancellation</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  You may cancel your subscription at any time from your account settings. Cancellation will take effect at the end of your current billing period. You will continue to have access to your subscription benefits until the end of the paid period.
-                </p>
-
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Coaching Sessions</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  1-on-1 coaching sessions are separate from subscriptions and are charged per session. Session fees are subject to our cancellation policy: cancellations made less than 24 hours before a scheduled session may forfeit the session fee.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-4">User Content</h2>
-                
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Your Content</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  You retain all ownership rights to content you upload to the Service, including videos, photos, and text ("Your Content"). By uploading Your Content, you grant us a non-exclusive, worldwide, royalty-free license to use, reproduce, modify, and display Your Content solely for the purpose of providing and improving the Service.
-                </p>
-
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Content Standards</h3>
-                <p className="text-gray-400 leading-relaxed mb-4">
-                  You agree not to upload content that:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4">
-                  <li>Violates any law or regulation</li>
-                  <li>Infringes on intellectual property rights</li>
-                  <li>Contains hate speech, harassment, or bullying</li>
-                  <li>Includes personal information of others without consent</li>
-                  <li>Contains malware or malicious code</li>
-                  <li>Promotes illegal activities</li>
-                </ul>
-
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Content Moderation</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  We reserve the right to remove any content that violates these Terms or is otherwise objectionable, without prior notice.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Coach Network</h2>
-                
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Coach Requirements</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Coaches must meet our qualification requirements and pass our verification process. Coaches are independent contractors, not employees of The Skate Workshop.
-                </p>
-
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Revenue Sharing</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Coaching session revenue is split as follows:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4">
-                  <li>Coach: 70%</li>
-                  <li>Willy's Workshop Brand: 15%</li>
-                  <li>Platform Fee: 15%</li>
-                </ul>
-
-                <h3 className="text-2xl font-bold text-white mb-3 mt-6">Coach Conduct</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Coaches must maintain professional conduct, provide quality service, and comply with all applicable laws and regulations. Failure to do so may result in removal from the coach network.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Intellectual Property</h2>
-                <p className="text-gray-400 leading-relaxed">
-                  The Service and its original content (excluding Your Content), features, and functionality are owned by The Skate Workshop and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
+                <p className="text-gray-400 leading-relaxed mt-4">
+                  A coach code establishes that an athlete is one of that coach's own students — it is not a background check, a certification, or a claim by us that any coach is qualified, licensed, or safe to train with. You are responsible for who you choose to train with, on or off the app, the same as you would be for any coaching relationship arranged outside it.
                 </p>
                 <p className="text-gray-400 leading-relaxed mt-4">
-                  You may not copy, modify, distribute, sell, or lease any part of the Service without our prior written consent.
+                  You're responsible for what happens under your account. Tell us if you think someone else has access to it.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Prohibited Activities</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">If you're under 18</h2>
+                <p className="text-gray-400 leading-relaxed">
+                  Many athletes on this platform are minors. If you are under 18, a parent or guardian must agree to these Terms on your behalf, and is responsible for your use of the Service. The app does not currently verify age at signup; a parent or guardian who allows a minor to use the Service is agreeing to these Terms for them.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-4">Your content</h2>
+                <p className="text-gray-400 leading-relaxed">
+                  You keep ownership of the videos, photos, and messages you upload or send ("Your Content"). By uploading it, you give us a license to store, process, and show it back to the coach or athlete you're paired with, solely to run the Service — nothing broader than that.
+                </p>
+                <p className="text-gray-400 leading-relaxed mt-4">
+                  A clip or milestone you mark as shared with your crew is also shown to the other athletes who train with your coach — that's the only broader visibility that exists, it only happens if you choose it, and you or your coach can unshare it at any time. Nothing is ever made public outside the app unless you separately choose to share it elsewhere yourself.
+                </p>
+                <p className="text-gray-400 leading-relaxed mt-4">
+                  Don't upload or send content that's illegal, that harasses or endangers anyone, that includes someone else's personal information without their consent, or that infringes someone else's rights — including sharing someone else's clip to your crew without their OK. We can remove content or suspend an account that violates this.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-4">Coach–athlete messaging</h2>
+                <p className="text-gray-400 leading-relaxed">
+                  Coaches and their athletes can message each other and review training clips directly in the app. Messages are visible only to you and the coach or athlete in that conversation — never to your crew, other athletes, or other coaches. Keep it to coaching. If a message or a coach makes you uncomfortable, or you believe someone is misusing the messaging or crew-sharing features, email <a href="mailto:support@theskateworkshop.app" className="text-brand-primary hover:underline">support@theskateworkshop.app</a> and we will look into it — which can include looking at the reported message, the same as any report needs to be investigated to act on it. See our <Link href="/privacy" className="text-brand-primary hover:underline">Privacy Policy</Link> for how we handle that.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-4">Pricing and coach compensation</h2>
+                <p className="text-gray-400 leading-relaxed">
+                  The Service is currently free during the beta period. We are not currently charging for any tier, subscription, or coaching session through the app. If that changes, we'll tell you the price and give you a clear chance to accept or decline before you're ever charged — not a retroactive bill for something you already assumed was free.
+                </p>
+                <p className="text-gray-400 leading-relaxed mt-4">
+                  If a coach is compensated for coaching arranged around the app, that arrangement is between the coach and whoever pays them — the Service does not process payments, collect a platform fee, or guarantee any specific split. We are not a party to that arrangement.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-4">Prohibited activities</h2>
                 <p className="text-gray-400 leading-relaxed mb-4">
                   You agree not to:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4">
                   <li>Use the Service for any illegal purpose</li>
                   <li>Attempt to gain unauthorized access to any part of the Service</li>
-                  <li>Interfere with or disrupt the Service or servers</li>
-                  <li>Use automated systems to access the Service without permission</li>
-                  <li>Impersonate any person or entity</li>
-                  <li>Collect user information without consent</li>
-                  <li>Transmit viruses or harmful code</li>
-                  <li>Engage in any activity that could damage our reputation</li>
+                  <li>Interfere with or disrupt the Service or its infrastructure</li>
+                  <li>Use automated systems to access the Service without our permission</li>
+                  <li>Impersonate any person or entity, including a coach code that isn't yours to use</li>
+                  <li>Collect other users' information without their consent</li>
+                  <li>Transmit viruses or other harmful code</li>
                 </ul>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-4">Intellectual Property</h2>
+                <p className="text-gray-400 leading-relaxed">
+                  The Service and its content, excluding Your Content, are owned by Joe's Tech Solutions LLC and protected by applicable intellectual property law — except for Willy Santos's own name, likeness, and brand assets, which are used under license and remain his. You may not copy, modify, distribute, or resell any part of the Service without our prior written consent.
+                </p>
               </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Disclaimer of Warranties</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
-                </p>
-                <p className="text-gray-400 leading-relaxed mt-4">
-                  We do not warrant that the Service will be uninterrupted, error-free, or secure. We do not warrant the results that may be obtained from use of the Service.
+                  THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE," ESPECIALLY GIVEN ITS BETA STATUS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Limitation of Liability</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SKATE WORKSHOP AND ITS AFFILIATES SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES.
+                  TO THE MAXIMUM EXTENT PERMITTED BY LAW, JOE'S TECH SOLUTIONS LLC SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE SERVICE, INCLUDING ANY DISPUTE, INJURY, OR LOSS ARISING FROM A COACHING RELATIONSHIP FORMED THROUGH THE SERVICE. SKATEBOARDING CARRIES INHERENT PHYSICAL RISK; THE SERVICE IS A VIDEO REVIEW AND COMMUNICATION TOOL, NOT A SUBSTITUTE FOR IN-PERSON COACHING, SAFETY EQUIPMENT, OR YOUR OWN JUDGMENT.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Indemnification</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">Account Termination</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  You agree to indemnify and hold harmless The Skate Workshop and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the Service or violation of these Terms.
+                  We can suspend or terminate an account that violates these Terms. You can stop using the Service, or ask us to delete your account, at any time by emailing <a href="mailto:support@theskateworkshop.app" className="text-brand-primary hover:underline">support@theskateworkshop.app</a>.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Governing Law</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">Governing Law and Disputes</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Dispute Resolution</h2>
-                <p className="text-gray-400 leading-relaxed">
-                  Any disputes arising from these Terms or the Service shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association, except that either party may seek injunctive relief in court.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Changes to Terms</h2>
-                <p className="text-gray-400 leading-relaxed">
-                  We reserve the right to modify these Terms at any time. We will notify users of material changes by posting the updated Terms on the Service and updating the "Last Updated" date. Your continued use of the Service after changes become effective constitutes acceptance of the modified Terms.
+                  These Terms are governed by the laws of the State of California. Any dispute arising from these Terms or the Service will be resolved through binding arbitration under the rules of the American Arbitration Association, except that either party may bring an individual claim in small-claims court, and either party may seek injunctive relief in court where arbitration would not be adequate.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Severability</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.
+                  If any part of these Terms is found unenforceable, that part is limited or removed to the minimum extent necessary, and the rest stays in effect.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Contact Information</h2>
-                <p className="text-gray-400 leading-relaxed mb-4">
-                  If you have questions about these Terms, please contact us:
+                <h2 className="text-3xl font-bold text-white mb-4">Changes to Terms</h2>
+                <p className="text-gray-400 leading-relaxed">
+                  We may update these Terms as the app changes. Material changes will be reflected here with an updated "Last Updated" date. Continuing to use the Service after a change means you accept it.
                 </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-4">Contact</h2>
                 <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
                   <p className="text-white mb-2">The Skate Workshop</p>
                   <p className="text-gray-400">Operated by: Joe's Tech Solutions LLC</p>
-                  <p className="text-gray-400 mt-2">Email: legal@skateworkshop.com</p>
-                  <p className="text-gray-400">General Inquiries: contact@skateworkshop.com</p>
+                  <p className="text-gray-400 mt-2">Legal: <a href="mailto:legal@theskateworkshop.app" className="text-brand-primary hover:underline">legal@theskateworkshop.app</a></p>
+                  <p className="text-gray-400">Support: <a href="mailto:support@theskateworkshop.app" className="text-brand-primary hover:underline">support@theskateworkshop.app</a></p>
                 </div>
               </div>
             </div>
