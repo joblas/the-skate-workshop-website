@@ -92,7 +92,7 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4">Coach–athlete messaging</h2>
                 <p className="text-gray-400 leading-relaxed">
-                  Coaches and their athletes can message each other and review training clips directly in the app. Messages are never shown to your crew or to anyone but the coach and athlete in that conversation. Keep it to coaching. If a message or a coach makes you uncomfortable, or you believe someone is misusing the messaging or crew-sharing features, email <a href="mailto:support@theskateworkshop.app" className="text-brand-primary hover:underline">support@theskateworkshop.app</a> and we will look into it.
+                  Coaches and their athletes can message each other and review training clips directly in the app. Messages are visible only to you and the coach or athlete in that conversation — never to your crew, other athletes, or other coaches. Keep it to coaching. If a message or a coach makes you uncomfortable, or you believe someone is misusing the messaging or crew-sharing features, email <a href="mailto:support@theskateworkshop.app" className="text-brand-primary hover:underline">support@theskateworkshop.app</a> and we will look into it — which can include looking at the reported message, the same as any report needs to be investigated to act on it. See our <Link href="/privacy" className="text-brand-primary hover:underline">Privacy Policy</Link> for how we handle that.
                 </p>
               </div>
 

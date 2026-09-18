@@ -49,7 +49,7 @@ export default function PrivacyPage() {
 
                 <h3 className="text-2xl font-bold text-white mb-3 mt-6">Training content and messages</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  Videos, photos, and text or voice messages you send to your matched coach or athlete are stored to deliver that feature. Messages between you and your coach or athlete are never visible to anyone else — not other athletes, not other coaches.
+                  Videos, photos, and text or voice messages you send to your matched coach or athlete are stored to deliver that feature. Messages are visible only to you and the coach or athlete you're paired with — never to your crew, other athletes, or other coaches. Our own staff can access data, including messages, only where needed to investigate a report, keep someone safe, fix a technical problem, or comply with the law.
                 </p>
 
                 <h3 className="text-2xl font-bold text-white mb-3 mt-6">Sharing a clip or milestone with your crew</h3>
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
 
                 <h3 className="text-2xl font-bold text-white mb-3 mt-6">Crash reports, diagnostics, and bug reports</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  The app uses Sentry to capture crash reports and errors, and runs light performance diagnostics (page-load and navigation timing) on a sample of sessions, so we can find and fix problems — this does not include session recordings or screenshots of your screen. The in-app feedback tool sends your device model, OS version, app version, and the screen you were on, plus whatever you write and an optional screenshot, to a private GitHub issue and a Slack notification so we can track and fix it.
+                  The app uses Sentry to capture crash reports and errors, and runs light performance diagnostics (page-load and navigation timing) on a sample of sessions, so we can find and fix problems — this does not include session recordings or screenshots of your screen. The in-app feedback tool sends your device name and model, OS version, app version, and the screen you were on, plus whatever you write and an optional screenshot, to a private GitHub issue — Slack gets only a link and a report ID, not your device details or what you wrote.
                 </p>
 
                 <h3 className="text-2xl font-bold text-white mb-3 mt-6">What we do not collect in the app</h3>
@@ -89,7 +89,7 @@ export default function PrivacyPage() {
                   <li><strong className="text-white">Waitlist:</strong> name and email</li>
                 </ul>
                 <p className="text-gray-400 leading-relaxed mt-4">
-                  These are sent by email through our provider (Hostinger) and, for the waitlist, may also be logged on our server. This website also runs Vercel Analytics, which counts page views without cookies and without building a profile of you.
+                  These are sent by email through our provider (Hostinger), and a submission may also be logged on our server. This website also runs Vercel Analytics, which counts page views without cookies and without building a profile of you.
                 </p>
               </div>
 
