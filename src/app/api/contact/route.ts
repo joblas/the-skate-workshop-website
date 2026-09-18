@@ -12,6 +12,7 @@ import { getSupabaseAdmin } from "@/lib/waitlist-store";
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
+  subject: z.string().min(3, "Subject must be at least 3 characters"),
   inquiryType: z.enum([
     "general",
     "coaching",
@@ -35,6 +36,7 @@ export async function POST(request: NextRequest) {
       .insert({
         name: validatedData.name,
         email: validatedData.email,
+        subject: validatedData.subject,
         inquiry_type: validatedData.inquiryType,
         message: validatedData.message,
       });
